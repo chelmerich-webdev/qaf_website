@@ -1,0 +1,133 @@
+ /*
+ * QAF Form and Input CSS styles.
+*/
+
+
+.delete {background-color: #c00; color: #fff;}
+.disabled { border-color: #fff; background-color: #ddd; }
+.success { color: #000; font-weight: normal }
+#delete {border: 0px dashed red; position: relative;}
+#delete input {
+  position: relative;
+  top: -62px;
+  left: 200px;
+}
+form {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 90%;
+
+}
+
+form fieldset {
+    border: 0px dashed blue;
+    height: 100%;
+}
+
+form legend {
+    border-top: 1px dashed #ccc;
+    padding: 14px 0;
+    width: 212px;
+}
+
+form label {
+    float: left;
+    clear: both;
+    width: 202px;
+    margin: 0px 10px 0 0;
+    text-align: right;
+    font-weight:bold;
+    border: 0px dotted orange;
+}
+
+
+div.inputbox {
+    position: relative;
+    margin: 0px 0px 10px 212px;
+    border: 0px dotted blue;
+    min-height: 42px;
+
+}
+
+div.inputbox label {
+    float: none;
+    display: inline;
+    margin: 3px 0 0 10px;
+}
+
+p.input-list-header {
+  margin-top: 0px;
+  margin-left: 212px;
+  font-size: 100%;
+  font-weight: bold;
+  
+}
+#col2 {
+  margin-left: 180px;
+}
+
+input, select, textarea {
+  margin-top: -3px;
+}
+
+input {
+    height: 20px;
+    border: 1px #999 solid;
+}
+
+ul.inputbox {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+ul.inputbox li {
+  margin-bottom: 0px;
+  height: 28px;
+  clear: both;
+}
+
+ul.inputbox li label {
+  clear: none;
+}
+
+ul.inputbox li input {
+  float: left;
+  margin-right: 10px;
+}
+
+textarea {
+    display: block;
+}
+
+.screenings .checkbox {
+    float: left;
+    clear: left;
+
+}
+.screenings label {
+    float: left;
+    clear: none;
+    width: 400px;
+    margin-left: 7px;
+    padding-bottom: 7px;
+    text-align: left;
+    font-weight: normal;
+    border: 0px solid green;
+}
+
+form input.highlight {
+    background-color: #fcc;
+}
+
+.withoutLabel {
+    margin-left: 212px;
+}
+
+form .error {
+    position: absolute;
+    /*height: 10px;*/
+    left: 0px;
+    bottom: 0px;
+    color: #000;
+    font-style: italic;
+}

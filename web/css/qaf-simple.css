@@ -1,0 +1,67 @@
+/*
+ * QAF Page and Content CSS styles.
+*/
+div#about, div#contact, div#press {
+  margin-left: 20px;
+  width: 500px;
+}
+
+#about ul {
+  /*margin-left: 10px;*/
+  margin-bottom: 1em;
+  /*font-size: 90%;*/
+  /*font-weight: normal;*/
+}
+#about ul li {
+  /*margin-bottom: 1em;*/
+  font-size: 80%;
+}
+
+#about p {
+  max-width: 500px;
+  /*font-size: 90%;*/
+  /*line-height: 150%;*/
+}
+
+blockquote {
+  position: relative;
+  /*width: 500px;*/
+  /*margin-left: 20px;*/
+  padding-bottom: 0;
+}
+
+blockquote:before {
+    content: "\201C";
+    margin-left: -0.6em;
+}
+
+blockquote:after {
+   content: "\201D";
+}
+
+ul li p.source {
+  /*width: 500px;*/
+}
+
+ul li p {
+  /*margin-left: 20px;*/
+  /*width: 500px;*/
+}
+
+/*h5 {margin-left: 20px;}*/
+
+dt {
+  float: left;
+  clear: both;
+  width: 202px;
+  margin: 3px 10px 0px 0px;
+  text-align: right;
+  font-weight:bold;
+  border: 1px solid orange;
+}
+
+dd {
+  float: left;
+  /*margin-left: 212px;*/
+  /*clear: both;*/
+}

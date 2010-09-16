@@ -1,0 +1,195 @@
+/*
+ * QAF Basic CSS styles.
+*/
+
+
+body {
+  font: normal 100%/100% "Droid Sans", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {text-transform: uppercase; font-weight: bold; text-align: left;}
+h1 {font-size: 200%; line-height: 110%;}    /* homepage film title */
+h2 {font-size: 133%;  line-height: 110%;}   /* current list film title */
+h3 {font-size: 100%; height: 30px; }        /* series title */
+h4 {font-size: 133%;  line-height: 110%; margin-bottom: 20px;}  /* simple page title */
+h5 {font-size: 80%;font-weight: bold; padding: 2em 0 1em 0;} /* headers with text, listing links*/
+/* homepage year and director, current list screening date */
+h6 {font-size: 70%; padding-bottom: 0; color: #666;}
+
+p, blockquote {padding-bottom: 1em; font-size: 80%;}
+a {text-decoration: none; }
+p a {border-bottom: 1px solid #999;}
+
+.redtext {color: #c00;} /* QAF Red */
+.graytext {color: #999;} /* QAF Gray */
+.nobold {font-weight: normal;}
+em, cite {font-style: italic;}
+strong {font-weight: bold;}
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+.submit {
+  width: 84px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#simple-page {
+    width: 714px;
+    /*height: 100%;*/
+    min-height: 400px;
+    margin: 0 0 10px 10px;
+    border-right: 1px dashed black;
+}
+
+a.qaf-film {
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+}
+
+#admin-message {
+  position: absolute;
+  top: 60px;
+  left: 222px;
+  line-height: 130%;
+}
+
+/* Branding color bar across the top of the page*/
+#redbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #c00; /* QAF red */
+  width: 100%;
+  height: 40px;
+}
+
+/* Overall page container block */
+#container {
+  width: 990px; /*sufficient width plus prevents scrollbar on full screen vs. 1024 */
+  height: 768px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left-hand navigation column */
+/* 201 column + 20 gutter + 1 rule = 222 column */
+/* padding offset from top = 108 */
+#navcol {
+  position: absolute;
+  width: 201px;
+  height: 100%;
+  padding-top: 108px;
+  padding-right: 20px;
+  border-right: 1px dashed #000;
+  text-align: right;
+}
+
+#menu li {
+  margin-top: 1em;
+  font-size: 80%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:link, .rollover a:link, a:visited, .rollover a:visited {
+  color: #000;
+}
+a:hover, .rollover a:hover {
+  color: #666;    /* QAF gray */
+  border: 0;
+}
+a:active, .rollover a:active {
+  color: #c00;     /* QAF red */
+  border: 0;
+}
+.red-rollover a:link, .red-rollover a:visited {
+  color: #c00;     /* QAF red */
+}
+.red-rollover a:hover {
+  color: #000;
+}
+.red-rollover a:active {
+  color: #c00;     /* QAF red */
+}
+.gray-rollover a:link, .gray-rollover a:visited , .rev-rollover a:link, .rev-rollover a:visited {
+  color: #666;  /* QAF gray */
+}
+.gray-rollover a:hover, .rev-rollover a:hover {
+  color: #000;
+}
+.gray-rollover a:active, .rev-rollover a:active {
+  color: #c00;     /* QAF red */
+}
+
+/* Main content column to right of navbar column, does not float */
+#mainbar {
+  float: none;
+  width: 735px;
+  height: 100%;
+  padding-top: 108px;
+  margin-left: 222px;
+  border: 0px dotted black;
+  /*position: relative;*/
+  /*background-color: silver;*/
+}
+
+
+/* footer layout and stylings */
+#footer1, #footer2 {
+  clear: both;
+  width: 714px;
+  margin: 9px auto;
+  border-top: 1px dashed #ccc;
+  padding-top: 14px;
+}
+
+#footer1 {
+  /*font-size: 75%;*/
+  /*position: relative*/
+}
+
+#footer1 img {
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+}
+
+#footer2, .smallgraycaps {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 65%;
+  font-weight: bold;
+}
+#footer2 ul {
+  margin: 0px;
+  padding-bottom: 14px;
+}
+#footer2 li {
+  display: inline;
+  padding: 0 1px;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+/*
+#mailing {
+  margin-right: 10px;
+  border-right: 2px solid #ccc;
+  padding-right: 10px;
+  display: inline;
+}
+
+#mailing input {
+  width: 150px;
+  margin: 0px 2px;
+  font: normal 125%/100% courier, monospaced;
+
+}
+
+*/

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>qaf</short-name>
+  <uri>qafTags</uri>
+  <tag>
+    <name>input</name>
+    <tag-class>com.queerartfilm.validation.FormInputTagHandler</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>label</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>size</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+    <attribute>
+      <name>disabled</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>message</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>required</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <dynamic-attributes>true</dynamic-attributes>
+  </tag>
+  <tag-file>
+    <name>press-bq</name>
+    <path>/WEB-INF/tags/qaf/press-bq.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>archive-youtube-embed</name>
+    <path>/WEB-INF/tags/qaf/archive-youtube-embed.tag</path>
+  </tag-file>
+  <function>
+    <name>getAssignable</name>
+    <function-class>com.queerartfilm.dao.FeaturedFilmDAO</function-class>
+    <function-signature>java.util.List getAssignable(long)</function-signature>
+  </function>
+  <function>
+    <name>getDate</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getDateString(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getYear</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getYear(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getMonth</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getMonth(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getDay</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getDay(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getHour</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getHour(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getMinute</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getMinute(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getAmpm</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getAmpm(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>doubleZero</name>
+    <function-class>com.queerartfilm.model.Utils</function-class>
+    <function-signature>java.lang.String doubleZero(int)</function-signature>
+  </function>
+  <function>
+    <name>getQAFSeriesByKey</name>
+    <function-class>com.queerartfilm.dao.QAFSeriesDAO</function-class>
+    <function-signature>com.queerartfilm.series.QAFSeries getQAFSeriesByKey(com.googlecode.objectify.Key)</function-signature>
+  </function>
+  <function>
+    <name>getFeaturedFilmByKey</name>
+    <function-class>com.queerartfilm.dao.FeaturedFilmDAO</function-class>
+    <function-signature>com.queerartfilm.film.FeaturedFilm getFeaturedFilmByKey(com.googlecode.objectify.Key)</function-signature>
+  </function>
+  <function>
+    <name>isInteger</name>
+    <function-class>com.queerartfilm.validation.IsIntegerV</function-class>
+    <function-signature>boolean isInteger(java.lang.String)</function-signature>
+  </function>
+  <tag-file>
+    <name>archive-feature-item</name>
+    <path>/WEB-INF/tags/qaf/archive-feature-item.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>head-include</name>
+    <path>/WEB-INF/tags/qaf/head-include.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>body-top-include</name>
+    <path>/WEB-INF/tags/qaf/body-top-include.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>body-bottom-include</name>
+    <path>/WEB-INF/tags/qaf/body-bottom-include.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>about-content</name>
+    <path>/WEB-INF/tags/qaf/about-content.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>contact-content</name>
+    <path>/WEB-INF/tags/qaf/contact-content.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>press-content</name>
+    <path>/WEB-INF/tags/qaf/press-content.tag</path>
+  </tag-file>
+</taglib>

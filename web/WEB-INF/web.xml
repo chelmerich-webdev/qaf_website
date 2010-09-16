@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <description>Google web font Inconsolata</description>
+        <param-name>com.googleapis.font.Inconsolata</param-name>
+        <param-value>http://fonts.googleapis.com/css?family=Inconsolata</param-value>
+    </context-param>
+    <context-param>
+        <description>Google web font DroidSans</description>
+        <param-name>com.googleapis.font.DroidSans</param-name>
+        <param-value>http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans:bold</param-value>
+    </context-param>
+    <context-param>
+        <description>Google web font DroidSerif</description>
+        <param-name>com.googleapis.font.DroidSerif</param-name>
+        <param-value>http://fonts.googleapis.com/css?family=Droid+Serif|Droid+Serif:italic</param-value>
+    </context-param>
+    <context-param>
+        <description>YUI Library CSS reset</description>
+        <param-name>com.yahooapis.yui.reset.css</param-name>
+        <param-value>http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css</param-value>
+    </context-param>
+    <context-param>
+        <description>value for the &lt;title&gt; tag</description>
+        <param-name>com.queerartfilm.wordmark</param-name>
+        <param-value>Queer|Art|Film</param-value>
+    </context-param>
+    <context-param>
+        <description>Basic web page structure and visual elements</description>
+        <param-name>com.queerartfilm.base.css</param-name>
+        <param-value>/css/qaf-base.css</param-value>
+    </context-param>
+    <context-param>
+        <description>menu labels</description>
+        <param-name>com.queerartfilm.menu.labels</param-name>
+        <param-value>home,about,archive,press,contact</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+        <param-value>en_US</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>en_US</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.timeZone</param-name>
+        <param-value>America/New_York</param-value>
+    </context-param>
+    <context-param>
+        <description>Earliest year a film was realeased</description>
+        <param-name>com.queerartfilm.film.year.start</param-name>
+        <param-value>1900</param-value>
+    </context-param>
+    <context-param>
+        <description>Year that Queer|Art|Film started</description>
+        <param-name>com.queerartfilm.startyear</param-name>
+        <param-value>2009</param-value>
+    </context-param>
+    <context-param>
+        <description>menu urls</description>
+        <param-name>com.queerartfilm.menu.uris</param-name>
+        <param-value>/current,/about,/archive,/press,/contact</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.homepage.css</param-name>
+        <param-value>/css/qaf-homepage.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.simple.css</param-name>
+        <param-value>/css/qaf-simple.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.form.css</param-name>
+        <param-value>/css/qaf-form.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.archive.css</param-name>
+        <param-value>/css/qaf-archive.css</param-value>
+    </context-param>
+    <filter>
+        <filter-name>Trim Whitespace</filter-name>
+        <filter-class>com.cj.trim.trimFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Trim Whitespace</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <listener>
+        <description>Initialzes web form list attributes</description>
+        <listener-class>com.queerartfilm.web.ListInitializerListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>Simple Menu Servlet</servlet-name>
+        <servlet-class>com.queerartfilm.web.SimpleMenuServlet</servlet-class>
+        <init-param>
+            <param-name>/about</param-name>
+            <param-value>/about.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>/contact</param-name>
+            <param-value>/contact.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>/press</param-name>
+            <param-value>/press.jsp</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <description>restricted test page</description>
+        <servlet-name>RestrictedPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/restricted.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <jsp-file>/WEB-INF/jsp/manage_home.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Manage Landing Page</servlet-name>
+        <jsp-file>/WEB-INF/jsp/manage_home.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Update Config</servlet-name>
+        <servlet-class>com.queerartfilm.web.ConfigUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Display Featured Films on Homepage</servlet-name>
+        <servlet-class>com.queerartfilm.film.FeaturedFilmHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Update Feature</servlet-name>
+        <servlet-class>com.queerartfilm.film.FeaturedFilmUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Update QAFSeries</servlet-name>
+        <servlet-class>com.queerartfilm.series.QAFSeriesUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Display Featured Films in Archive</servlet-name>
+        <servlet-class>com.queerartfilm.film.FeaturedFilmArchiveServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete FeaturedFilms</servlet-name>
+        <servlet-class>com.queerartfilm.film.FeaturedFilmDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete QAFSeries</servlet-name>
+        <servlet-class>com.queerartfilm.series.QAFSeriesDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Subscribe Notice</servlet-name>
+        <servlet-class>com.queerartfilm.web.MailingListSubscribeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Persist All FeaturedFilms</servlet-name>
+        <servlet-class>com.queerartfilm.film.FeaturedFilmPersistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RestrictedPage</servlet-name>
+        <url-pattern>/admin/restricted</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Manage Landing Page</servlet-name>
+        <url-pattern>/manage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Update Config</servlet-name>
+        <url-pattern>/manage/config/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display Featured Films on Homepage</servlet-name>
+        <url-pattern>/current/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Update Feature</servlet-name>
+        <url-pattern>/manage/features/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Update QAFSeries</servlet-name>
+        <url-pattern>/manage/qafseries/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete FeaturedFilms</servlet-name>
+        <url-pattern>/manage/features/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete QAFSeries</servlet-name>
+        <url-pattern>/manage/qafseries/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display Featured Films in Archive</servlet-name>
+        <url-pattern>/archive/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Simple Menu Servlet</servlet-name>
+        <url-pattern>/about</url-pattern>
+        <url-pattern>/press</url-pattern>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Subscribe Notice</servlet-name>
+        <url-pattern>/subscribe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Persist All FeaturedFilms</servlet-name>
+        <url-pattern>/manage/features/persist</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/jsp/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/jsp/error.jsp</location>
+    </error-page>
+    <security-constraint>
+        <display-name>Administration</display-name>
+        <web-resource-collection>
+            <web-resource-name>Administration</web-resource-name>
+            <description>allow website data management</description>
+            <url-pattern>/manage/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Administration</description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-role>
+        <description>All logged in
+        </description>
+        <role-name>*</role-name>
+    </security-role>
+    <security-role>
+        <description>Administrators</description>
+        <role-name>admin</role-name>
+    </security-role>
+</web-app>
