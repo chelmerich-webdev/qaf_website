@@ -64,6 +64,7 @@ public class FeaturedFilm implements Serializable, Comparable<FeaturedFilm> {
     void updateComputedProperties() {
         setUrlKey();
         setAssigned();
+        getScreening().setPast();
         getScreening().setOnSale();
     }
 

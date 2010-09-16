@@ -53,7 +53,7 @@
           ${curFeature.screening.venue.address2}<br/>
           ${curFeature.screening.venue.phoneNumber.number}
         </p>
-        <c:if test="${curFeature.screening.onSale && !empty curFeature.screening.purchaseUrl}">
+        <c:if test="${curFeature.screening.onSale}"> <%--&& !empty curFeature.screening.purchaseUrl}">--%>
           <div id="purchase">
             <a href="${curFeature.screening.purchaseUrl}">Purchase Tickets</a>
           </div>

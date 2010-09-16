@@ -4,9 +4,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="qaf" uri="qafTags" %>
-<%--<jsp:useBean id="film" class="com.queerartfilm.film.Film" scope="request"/>
-<c:set var="event" value="${qaf:getEventByKey(film.parentKey)}" />--%>
 <jsp:useBean id="feature" class="com.queerartfilm.film.FeaturedFilm" scope="request" />
+<jsp:useBean id="today" class="java.util.Date" scope="request" />
 <html>
   <head>
     <qaf:head-include />
@@ -55,6 +54,9 @@
         <div id="listing-content-col">
           <p>${feature.synopsis}</p>
           <c:set var="showdate" value="${feature.screening.date}" />
+          <c:if test="${feature.screening.past}" >
+            <p>Screened: <strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong></p>
+          </c:if>
           <%--          <c:choose>
                       <c:when test="true">
                         <div id="purchase">
@@ -63,7 +65,6 @@
                         <p><strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong>
                       </c:when>
                       <c:otherwise>--%>
-          <p>Screened: <strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong></p>
           <%--            </c:otherwise>
                     </c:choose>--%>
         </div>

@@ -82,6 +82,7 @@ public class Screening implements Serializable, Comparable<Screening> {
     private Venue venue;
     private String purchaseUrl;
     private boolean onSale;
+    private boolean past;
     private String secondTime;
 
     public Screening() {
@@ -113,16 +114,6 @@ public class Screening implements Serializable, Comparable<Screening> {
         this.purchaseUrl = purchaseUrl;
     }
 
-    /**
-     * If onSale is true, check if past via setter. Once false, always false.
-     * @return
-     */
-    public boolean isOnSale() {
-        if (onSale) {
-            this.setOnSale();
-        }
-        return onSale;
-    }
 
     public String getSecondTime() {
         return secondTime;
@@ -132,23 +123,52 @@ public class Screening implements Serializable, Comparable<Screening> {
         this.secondTime = secondTime;
     }
 
+    /**
+     * If onSale is true, check if purchaseable and not yet past via setter.
+     * Once false, always false.
+     * @return <code>true</code> if on sale, <code>false</code> otherwise.
+     */
+    public boolean isOnSale() {
+        if (onSale) {
+            this.setOnSale();
+        }
+        return onSale;
+    }
     
-
     /**
      * This package-private setter sets a derived value so takes no parameters.
      */
     void setOnSale() {
-        if (this.date == null || isPast()) {
+        boolean noScreeningDate = this.date == null;
+        boolean noPurchaseUrl = this.purchaseUrl == null || "".equals(this.purchaseUrl);
+        
+        if (noScreeningDate || noPurchaseUrl || isPast()) {
             this.onSale = false;
         } else {
             this.onSale = true;
         }
     }
 
-    private boolean isPast() {
+    /**
+     * If past is false, check if against current date. Once false, always false.
+     * @return <code>true</code> if past, <code>false</code> otherwise.
+     */
+    public boolean isPast() {
+        if (!past) {
+            this.setPast();
+        }
+        return past;
+    }
+
+    void setPast() {
+        if (date == null) {
+            past = false;
+            return;
+        }
+        
         Date today = getDateOnly(new Date());
-        Date showdate = getDateOnly(this.getDate());
-        return today.after(showdate);
+        Date showdate = getDateOnly(this.date);
+        this.past = today.after(showdate);
     }
 
     private Date getDateOnly(Date date) {
