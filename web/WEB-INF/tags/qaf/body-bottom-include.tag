@@ -1,6 +1,7 @@
 <%@tag description="standard for footer"
        pageEncoding="UTF-8" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="maillink">
   mailto:${current.subscribeEmailAddress}?subject=${current.subscribeEmailSubject}&body=${current.subscribeEmailBody}
 </c:set>
@@ -19,8 +20,9 @@
 <div id="footer2">
     <ul class="left">
         <li>${initParam['com.queerartfilm.wordmark']}: </li>
-        <c:forEach var="item" items="${menuMap}" varStatus="status">
-            <li class="gray-rollover"><a href="${item.value}">${item.key}</a></li>
+        <c:set var="labels" value="${fn:split(initParam['com.queerartfilm.menu.labels'], ',')}" />
+            <c:forEach var="item" items="${labels}" varStatus="status">
+            <li class="gray-rollover"><a href="${menuMap[item]}">${item}</a></li>
         </c:forEach>
     </ul>
     <span class="right gray-rollover">&copy; 2010<%--| <a href="${logInOutLink}">${logInOutLabel}</a>--%> | Design by <a href="http://www.shaneluitjens.com">Torquere Creative</a></span>
