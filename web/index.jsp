@@ -9,7 +9,7 @@
 <c:set var="curFeature" value="${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}" scope="page" />
 <c:if test="${selectedFeature != null}"><c:set var="curFeature" value="${selectedFeature}" /></c:if>
 
-<html>
+<html> 
   <head>
     <qaf:head-include />
     <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.homepage.css']}" />
