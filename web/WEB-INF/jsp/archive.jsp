@@ -13,8 +13,8 @@
   <body>
     <qaf:body-top-include />
     <div id="admin-message"><p class="nobold">${notfound}</p></div>
-    <div id="archive" >
-      <h2>Archive</h2>
+    <div id="archive">
+      <h2>${menusMap['archive'][0]}</h2>
 
       <c:set var="allItems" value="${featureDAO.allAssigned}" />
       <c:set var="totalCount" value="${fn:length(allItems)}" />

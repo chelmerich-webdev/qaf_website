@@ -152,8 +152,7 @@ public class ListInitializerListener implements ServletContextListener {
         context.setAttribute("venueList", venueList);
 
 
-        Map<String, String> menuMap = new HashMap<String, String>();
-        Map<String, List<String>> menusMap = new HashMap<String, List<String>>();
+//        Map<String, String> menuMap = new HashMap<String, String>();
 //        String[] labels = context.getInitParameter("com.queerartfilm.menu.labels").split(",");
 ////        logger.info("Labels: " + Arrays.toString(labels));
 //        String[] uris = context.getInitParameter("com.queerartfilm.menu.uris").split(",");
@@ -162,6 +161,8 @@ public class ListInitializerListener implements ServletContextListener {
 //        for (int i = 0; i < len; i++) {
 //            menuMap.put(labels[i], uris[i]);
 //        }
+//        context.setAttribute("menuMap", menuMap);
+        Map<String, List<String>> menusMap = new HashMap<String, List<String>>();
         String menuParam = "com.queerartfilm.menu.";
         String[] keys = context.getInitParameter(menuParam + "keys").split(",");
         int len = keys.length;
@@ -169,7 +170,6 @@ public class ListInitializerListener implements ServletContextListener {
             String[] menuValues = context.getInitParameter(menuParam + keys[i]).split(",");
             menusMap.put(keys[i], Arrays.asList(menuValues));
         }
-        context.setAttribute("menuMap", menuMap);
         context.setAttribute("menusMap", menusMap);
     }
 

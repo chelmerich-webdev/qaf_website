@@ -26,7 +26,7 @@ public class FeaturedFilmArchiveServlet extends HttpServlet {
             "The film ID <strong>\"%s\"</strong> was not found.<br/>"
             + "Please look through the %s Archive below.";
     private static final String FILM_ATTR = "feature";
-    private static final String ARCHIVE_DIR = "/archive";
+    private static final String ARCHIVE_DIR = "/films";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.

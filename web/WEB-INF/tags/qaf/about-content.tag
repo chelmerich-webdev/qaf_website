@@ -8,7 +8,7 @@
 <ul>
   <c:forEach var="ff" items="${featureDAO.allItems}">
     <li class="rollover">
-      ${ff.presenter} presents <a class="qaf-film" href="${menuMap['archive']}/${ff.urlKey}">${ff.title}</a> (${ff.director})
+      ${ff.presenter} presents <a class="qaf-film" href="${menuMap['archive'][1]}/${ff.urlKey}">${ff.title}</a> (${ff.director})
     </li>
   </c:forEach>
 </ul>

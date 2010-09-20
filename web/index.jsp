@@ -24,7 +24,7 @@
         <c:set var="showdate" value="${feature.screening.date}"/>
         <div class="series-listing">
           <%--<div id="sprite-${status.count}" class="sprite"><a href="${menuMap['home']}/${feature.urlKey}"></a></div>--%>
-          <a href="${menuMap['home']}/${feature.urlKey}"><img src="/images/${feature.urlKey}_vert.png" height="90" width="45" alt="${feature.title}" /></a>
+          <a href="${menuMap['home']}/${feature.urlKey}"><img class="${feature.urlKey != curFeature.urlKey ? 'rollover' : ''}" src="/images/${feature.urlKey}_vert${feature.urlKey eq curFeature.urlKey ? '-hover' : ''}.png" height="90" width="45" alt="${feature.title}" /></a>
           <h6>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</h6>
           <h6>${feature.presenter} presents</h6>
           <h2 class="${feature.urlKey eq curFeature.urlKey ? 'red-rollover' : 'gray-rollover'}" ><a href="${menuMap['home']}/${feature.urlKey}">${feature.title}</a></h2>
@@ -77,7 +77,7 @@
     <qaf:body-bottom-include />
     <script type="text/javascript">
       $(function() {
-        $(".series-listing img").hover(function() {
+        $(".series-listing img.rollover").hover(function() {
           $(this).attr("src", $(this).attr("src").split(".").join("-hover."));
         }, function() {
           $(this).attr("src", $(this).attr("src").split("-hover.").join("."));
