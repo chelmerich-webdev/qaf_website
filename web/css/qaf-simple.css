@@ -7,26 +7,18 @@ div#about, div#contact, div#press {
 }
 
 #about ul {
-  /*margin-left: 10px;*/
   margin-bottom: 1em;
-  /*font-size: 90%;*/
-  /*font-weight: normal;*/
 }
 #about ul li {
-  /*margin-bottom: 1em;*/
   font-size: 80%;
 }
 
 #about p {
   max-width: 500px;
-  /*font-size: 90%;*/
-  /*line-height: 150%;*/
 }
 
 blockquote {
   position: relative;
-  /*width: 500px;*/
-  /*margin-left: 20px;*/
   padding-bottom: 0;
 }
 
@@ -39,18 +31,11 @@ blockquote:after {
    content: "\201D";
 }
 
-ul li p.source {
-  /*width: 500px;*/
+ul.press:first-child li:first-child h5 {
+  padding-top: 0;
 }
 
-ul li p {
-  /*margin-left: 20px;*/
-  /*width: 500px;*/
-}
-
-/*h5 {margin-left: 20px;}*/
-
-dt {
+/*dt {
   float: left;
   clear: both;
   width: 202px;
@@ -61,7 +46,7 @@ dt {
 }
 
 dd {
-  float: left;
+  float: left;*/
   /*margin-left: 212px;*/
   /*clear: both;*/
-}
+/*}*/
