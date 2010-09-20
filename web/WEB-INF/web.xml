@@ -31,11 +31,6 @@
         <param-value>/css/qaf-base.css</param-value>
     </context-param>
     <context-param>
-        <description>menu labels</description>
-        <param-name>com.queerartfilm.menu.labels</param-name>
-        <param-value>home,about,archive,press,contact</param-value>
-    </context-param>
-    <context-param>
         <param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
         <param-value>en_US</param-value>
     </context-param>
@@ -60,7 +55,7 @@
     <context-param>
         <description>menu urls</description>
         <param-name>com.queerartfilm.menu.uris</param-name>
-        <param-value>/current,/about,/archive,/press,/contact</param-value>
+        <param-value>/current,/about,/films,/press,/contact</param-value>
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.homepage.css</param-name>
@@ -77,6 +72,30 @@
     <context-param>
         <param-name>com.queerartfilm.archive.css</param-name>
         <param-value>/css/qaf-archive.css</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.home</param-name>
+        <param-value>home,/current</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.about</param-name>
+        <param-value>about,/about</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.archive</param-name>
+        <param-value>all films,/films</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.press</param-name>
+        <param-value>press,/press</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.contact</param-name>
+        <param-value>contact,/contact</param-value>
+    </context-param>
+    <context-param>
+        <param-name>com.queerartfilm.menu.keys</param-name>
+        <param-value>home,about,archive,press,contact</param-value>
     </context-param>
     <filter>
         <filter-name>Trim Whitespace</filter-name>
@@ -193,10 +212,6 @@
         <url-pattern>/manage/qafseries/delete</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Display Featured Films in Archive</servlet-name>
-        <url-pattern>/archive/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Simple Menu Servlet</servlet-name>
         <url-pattern>/about</url-pattern>
         <url-pattern>/press</url-pattern>
@@ -209,6 +224,11 @@
     <servlet-mapping>
         <servlet-name>Persist All FeaturedFilms</servlet-name>
         <url-pattern>/manage/features/persist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display Featured Films in Archive</servlet-name>
+        <url-pattern>/films/*</url-pattern>
+        <url-pattern>/archive/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

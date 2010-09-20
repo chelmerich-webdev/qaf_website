@@ -153,15 +153,24 @@ public class ListInitializerListener implements ServletContextListener {
 
 
         Map<String, String> menuMap = new HashMap<String, String>();
-        String[] labels = context.getInitParameter("com.queerartfilm.menu.labels").split(",");
-//        logger.info("Labels: " + Arrays.toString(labels));
-        String[] uris = context.getInitParameter("com.queerartfilm.menu.uris").split(",");
-//        logger.info("URIs: " + Arrays.toString(uris));
-        int len = Math.min(labels.length, uris.length); // prevents index error
+        Map<String, List<String>> menusMap = new HashMap<String, List<String>>();
+//        String[] labels = context.getInitParameter("com.queerartfilm.menu.labels").split(",");
+////        logger.info("Labels: " + Arrays.toString(labels));
+//        String[] uris = context.getInitParameter("com.queerartfilm.menu.uris").split(",");
+////        logger.info("URIs: " + Arrays.toString(uris));
+//        int len = Math.min(labels.length, uris.length); // prevents index error
+//        for (int i = 0; i < len; i++) {
+//            menuMap.put(labels[i], uris[i]);
+//        }
+        String menuParam = "com.queerartfilm.menu.";
+        String[] keys = context.getInitParameter(menuParam + "keys").split(",");
+        int len = keys.length;
         for (int i = 0; i < len; i++) {
-            menuMap.put(labels[i], uris[i]);
+            String[] menuValues = context.getInitParameter(menuParam + keys[i]).split(",");
+            menusMap.put(keys[i], Arrays.asList(menuValues));
         }
         context.setAttribute("menuMap", menuMap);
+        context.setAttribute("menusMap", menusMap);
     }
 
     @Override

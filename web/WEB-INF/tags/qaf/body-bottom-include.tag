@@ -18,13 +18,15 @@
     </form>--%>
 </div>
 <div id="footer2">
+  <%--Remove footer menu per client--%>
     <ul class="left">
-        <li>${initParam['com.queerartfilm.wordmark']}: </li>
-        <c:set var="labels" value="${fn:split(initParam['com.queerartfilm.menu.labels'], ',')}" />
-            <c:forEach var="item" items="${labels}" varStatus="status">
-            <li class="gray-rollover"><a href="${menuMap[item]}">${item}</a></li>
-        </c:forEach>
+        <li>&copy; 2010 ${initParam['com.queerartfilm.wordmark']}</li>
+<%--                        <c:forEach var="key" items="${initParam['com.queerartfilm.menu.keys']}">
+              <li><a href="${menusMap[key][1]}">${menusMap[key][0]}</a></li>
+            </c:forEach>--%>
     </ul>
-    <span class="right gray-rollover">&copy; 2010<%--| <a href="${logInOutLink}">${logInOutLabel}</a>--%> | Design by <a href="http://www.shaneluitjens.com">Torquere Creative</a></span>
+    <span class="right gray-rollover"><%--&copy; 2010 | <a href="${logInOutLink}">${logInOutLabel}</a>--%>
+      Site by <a href="http://www.shaneluitjens.com">Torquere Creative</a>
+      &amp; <a href="http://www.curthelmerich.net">curthelmerich.net</a></span>
 </div>
 </div></div>
