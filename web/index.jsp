@@ -1,18 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="qaf" uri="qafTags" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="curSeries" value="${qaf:getQAFSeriesByKey(current.qafSeriesKey)}" scope="page"/>
 <c:set var="curFeature" value="${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}" scope="page" />
 <c:if test="${selectedFeature != null}"><c:set var="curFeature" value="${selectedFeature}" /></c:if>
-
+<!DOCTYPE html>
 <html> 
   <head>
     <qaf:head-include />
-    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.homepage.css']}" />
+    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.homepage.css']}" >
     <script type="text/javascript" src="/jquery-1.4.2.min.js"></script>
   </head>
   <body>
@@ -55,7 +52,7 @@
         </p>
         <c:if test="${curFeature.screening.onSale}"> <%--&& !empty curFeature.screening.purchaseUrl}">--%>
           <div id="purchase">
-            <a href="${curFeature.screening.purchaseUrl}">Purchase Tickets</a>
+            <a href="${fn:escapeXml(curFeature.screening.purchaseUrl)}">Purchase Tickets</a>
           </div>
         </c:if>
       </div>

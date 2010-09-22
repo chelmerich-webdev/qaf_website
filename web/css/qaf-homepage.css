@@ -75,7 +75,7 @@ div.series-listing img {
   display: block;
 }
 
-#purchase a:link, #purchase a:visted, #more-info a:link, #more-info a:visted {}
+#purchase a:link, #purchase a:visited, #more-info a:link, #more-info a:visited {}
 #purchase a:hover, #more-info a:hover {font-weight: bold;}
 #purchase a:active, #more-info a:active {}
 
@@ -156,7 +156,7 @@ div#sprite-3 a {
 div#sprite-4 a {
   background-position: -135px 0;
 }
-div.sprite a:link, div.sprite a:visted {}
+div.sprite a:link, div.sprite a:visited {}
 div#sprite-1 a:hover {
   background: transparent url('/images/series_sprite.png')
     0px -90px no-repeat;

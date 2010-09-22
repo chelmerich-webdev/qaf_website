@@ -5,9 +5,13 @@
 <c:set var="maillink">
   mailto:${current.subscribeEmailAddress}?subject=${current.subscribeEmailSubject}&body=${current.subscribeEmailBody}
 </c:set>
+<%--  <c:url var="mailtolink" value="mailto:${current.subscribeEmailAddress}">
+    <c:param  name="subject" value="${current.subscribeEmailSubject}"/>
+    <c:param name="body" value="${current.subscribeEmailBody}" />
+  </c:url>--%>
 <div id="footer1" >
-  <p class="left">For email updates, <a href="${maillink}">join the ${initParam['com.queerartfilm.wordmark']} mailing list</a></p>
-    <a class="right" href="${current.facebookUrl}"><img src="/images/f_logo.png" /></a><p class="right">Friend us on Facebook</p>
+  <p class="left">For email updates, <a href='<c:out value="${fn:replace(maillink,' ','%20')}" />' >join the ${initParam['com.queerartfilm.wordmark']} mailing list</a></p>
+    <a class="right" href='<c:out value="${current.facebookUrl}"/>' ><img src="/images/f_logo.png" alt="Facebook"/></a><p class="right">Friend us on Facebook</p>
 <%--    <form id="mailing" name="mailing" action="" method="POST">
         <input type="text" name="email" id="email"/>
         <input type="hidden" name="return-page" value="${pageContext.request.requestURI}"/>
