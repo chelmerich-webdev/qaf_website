@@ -60,7 +60,7 @@
             <c:otherwise>
               <c:if test="${feature.screening.onSale}" >
               <div id="buy-tickets">
-                <div id="purchase"><a href="${feature.screening.purchaseUrl}">Purchase Tickets</a></div>
+                <div id="purchase"><a href="${fn:escapeXml(feature.screening.purchaseUrl)}">Purchase Tickets</a></div>
                 <p><strong>${qaf:getDate(showdate)}</strong>
                   <span class="nobold">${qaf:getTime(showdate)}</span>
                   <c:if test="${!empty feature.screening.secondTime}" >
