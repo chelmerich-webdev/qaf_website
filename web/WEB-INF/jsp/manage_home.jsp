@@ -1,11 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@page import="com.google.appengine.api.users.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="qaf" uri="qafTags" %>
 <jsp:useBean id="featureDAO" class="com.queerartfilm.dao.FeaturedFilmDAO" />
 <jsp:useBean id="qafSeriesDAO" class="com.queerartfilm.dao.QAFSeriesDAO" />
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.form.css']}" />

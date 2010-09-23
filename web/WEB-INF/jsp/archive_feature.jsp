@@ -1,11 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="qaf" uri="qafTags" %>
 <jsp:useBean id="feature" class="com.queerartfilm.film.FeaturedFilm" scope="request" />
 <jsp:useBean id="today" class="java.util.Date" scope="request" />
+<!DOCTYPE html>
 <html>
   <head>
     <qaf:head-include />
