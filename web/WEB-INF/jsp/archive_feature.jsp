@@ -72,16 +72,7 @@
               </div>
             </c:otherwise>
           </c:choose>
-          <%--          <c:choose>
-                      <c:when test="true">
-                        <div id="purchase">
-                          <a href="${feature.screening.purchaseUrl}">Purchase Tickets</a>
-                        </div>
-                        <p><strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong>
-                      </c:when>
-                      <c:otherwise>--%>
-          <%--            </c:otherwise>
-                    </c:choose>--%>
+          <div class="clear"></div>
         </div>
       </div>
     </div>

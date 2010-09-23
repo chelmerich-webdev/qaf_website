@@ -102,6 +102,7 @@ li.archive-item h6 {
 }
 #more-info {
   margin-top: 0px;
+  border: 1px solid #000;
   padding: 4px 0 0 10px;
   height: 14px;
   font-size: 70%;
@@ -121,8 +122,15 @@ div#buy-tickets p {
   float: left;
 }
 #purchase a {
-  margin: 0;
+  position: relative;
+  top: -2px;
   width: 118px;
+  height: 14px;
+  margin: 0;
+  padding: 4px 0 0 10px;
+  /*font-size: 70%;*/
+  /*font-weight: normal;*/
+  /*line-height: 100%;*/
 }
 #listing-links-col img {
   margin-right: 15px;
