@@ -59,17 +59,17 @@
               <p>Screened: <strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong></p>
             </c:when>
             <c:otherwise>
+              <c:if test="${feature.screening.onSale}" >
               <div id="buy-tickets">
                 <div id="purchase"><a href="${feature.screening.purchaseUrl}">Purchase Tickets</a></div>
-                <%--<p><strong>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</strong>--%>
                 <p><strong>${qaf:getDate(showdate)}</strong>
-                  <%--<span class="nobold">${qaf:getHour(showdate)}:${qaf:getMinute(showdate)}${qaf:getAmpm(showdate)}</span>--%>
                   <span class="nobold">${qaf:getTime(showdate)}</span>
                   <c:if test="${!empty feature.screening.secondTime}" >
                     <span class="nobold"> and ${feature.screening.secondTime}</span>
                   </c:if>
                 </p>
               </div>
+              </c:if>
             </c:otherwise>
           </c:choose>
           <div class="clear"></div>
