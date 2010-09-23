@@ -38,8 +38,10 @@
 
       <div id="info-left">
         <c:set var="showdate" value="${curFeature.screening.date}"/>
-        <p class="redtext">${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</p>
-        <p><span class="graytext nobold">${qaf:getHour(showdate)}:${qaf:getMinute(showdate)}${qaf:getAmpm(showdate)}</span>
+        <%--<p class="redtext">${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</p>--%>
+        <p class="redtext">${qaf:getDate(showdate)}</p>
+        <%--<p><span class="graytext nobold">${qaf:getHour(showdate)}:${qaf:getMinute(showdate)}${qaf:getAmpm(showdate)}</span>--%>
+        <p><span class="graytext nobold">${qaf:getTime(showdate)}</span>
           <c:if test="${!empty curFeature.screening.secondTime}" >
             <span class="graytext nobold"> and ${curFeature.screening.secondTime}</span>
           </c:if>

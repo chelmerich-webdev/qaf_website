@@ -34,34 +34,37 @@
         <c:set var="field" value="filmKeys" />
         <div class="inputbox">
           <fieldset class="screenings">
-            <c:forEach var="ff" items="${featureDAO.allItems}" varStatus="status">
-              <c:choose>
-                <%--if ff is has no parent, show it--%>
-                <c:when test="${ff['assigned'] eq false}" >
-                  <input type="checkbox" name="${field}" id="ckbx${status.count}"
-                         class="checkbox" value="${ff.id}"/>
-                  <label for="ckbx${status.count}">${ff}</label>
-                </c:when>
-                <%--if ff has a parent, then see if it is this qafSeries--%>
-                <c:otherwise>
-                  <%--if qafSeries has any children keys--%>
-                  <c:if test="${fn:length(qafSeries.filmKeysAsListDesc) > 0}" >
-                    <%--then for each one of these keys--%>
-                    <c:forEach var="childKey" items="${qafSeries.filmKeysAsListDesc}" >
-                      <%--see if its id is the same as the current assigned ff id--%>
-                      <c:if test="${childKey.id eq ff.id}">
-                        <%--if so, add as a selected checkbox--%>
-                        <input type="checkbox" name="${field}" id="ckbx${status.count}"
-                               class="checkbox" value="${ff.id}" checked="checked"/>
-                        <label for="ckbx${status.count}">${ff}</label>
+            <ul>
+              <c:forEach var="ff" items="${featureDAO.allItems}" varStatus="status">
+                <li>
+                  <c:choose>
+
+                    <%--if ff is has no parent, show it--%>
+                    <c:when test="${ff['assigned'] eq false}" >
+                      <input type="checkbox" name="${field}" id="ckbx${status.count}"
+                             class="checkbox" value="${ff.id}"/>
+                      <label for="ckbx${status.count}">${ff}</label>
+                    </c:when>
+                    <%--if ff has a parent, then see if it is this qafSeries--%>
+                    <c:otherwise>
+                      <%--if qafSeries has any children keys--%>
+                      <c:if test="${fn:length(qafSeries.filmKeysAsListDesc) > 0}" >
+                        <%--then for each one of these keys--%>
+                        <c:forEach var="childKey" items="${qafSeries.filmKeysAsListDesc}" >
+                          <%--see if its id is the same as the current assigned ff id--%>
+                          <c:if test="${childKey.id eq ff.id}">
+                            <%--if so, add as a selected checkbox--%>
+                            <input type="checkbox" name="${field}" id="ckbx${status.count}"
+                                   class="checkbox" value="${ff.id}" checked="checked"/>
+                            <label for="ckbx${status.count}">${ff}</label>
+                          </c:if>
+                        </c:forEach>
                       </c:if>
-                    </c:forEach>
-                  </c:if>
-                </c:otherwise>
-              </c:choose>
-
-            </c:forEach>
-
+                    </c:otherwise>
+                  </c:choose>
+                </li>
+              </c:forEach>
+            </ul>
           </fieldset>
           <span class="error clear">${form.messages[field]}</span>
         </div>
@@ -88,8 +91,8 @@
       </form>
     </div>
     <script type="text/javascript">
-          setHighlight('${form != null ? form.highlight : ''}');
-          setFocus('${form != null ? form.focus : ''}');
+      setHighlight('${form != null ? form.highlight : ''}');
+      setFocus('${form != null ? form.focus : ''}');
     </script>
     <qaf:body-bottom-include />
   </body>

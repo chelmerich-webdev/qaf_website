@@ -62,9 +62,19 @@
     <function-signature>java.util.List getAssignable(long)</function-signature>
   </function>
   <function>
+    <name>getDateTime</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getDateTime(java.util.Date)</function-signature>
+  </function>
+  <function>
     <name>getDate</name>
     <function-class>com.queerartfilm.film.Screening</function-class>
-    <function-signature>java.lang.String getDateString(java.util.Date)</function-signature>
+    <function-signature>java.lang.String getDate(java.util.Date)</function-signature>
+  </function>
+  <function>
+    <name>getTime</name>
+    <function-class>com.queerartfilm.film.Screening</function-class>
+    <function-signature>java.lang.String getTime(java.util.Date)</function-signature>
   </function>
   <function>
     <name>getYear</name>

@@ -99,17 +99,17 @@ textarea {
     display: block;
 }
 
+.screenings ul li {
+  padding-bottom: 10px;
+}
 .screenings .checkbox {
-    float: left;
-    clear: left;
-
+  position: relative;
+  top: 3px;
 }
 .screenings label {
-    float: left;
-    clear: none;
+    float: none;
     width: 400px;
-    margin-left: 7px;
-    padding-bottom: 7px;
+
     text-align: left;
     font-weight: normal;
     border: 0px solid green;

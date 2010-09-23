@@ -30,12 +30,28 @@ public class Screening implements Serializable, Comparable<Screening> {
     public static DateFormat dfAmpm = new SimpleDateFormat("a");
 
     // EL function declarations
-    public static String getDateString(Date date) {
+    public static String getDateTime(Date date) {
         if (date == null) {
             return "";
         }
         return df.format(date);
     }
+
+    public static String getDate(Date date) {
+        if (date == null) {
+            return "";
+        }
+        return DateFormat.getDateInstance(DateFormat.LONG).format(date);
+    }
+
+    public static String getTime(Date date) {
+        if (date == null) {
+            return "";
+        }
+        return DateFormat.getTimeInstance(DateFormat.SHORT).format(date);
+    }
+
+    
 
     public static String getYear(Date date) {
         if (date == null) {

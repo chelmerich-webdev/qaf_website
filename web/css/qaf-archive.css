@@ -113,6 +113,17 @@ li.archive-item h6 {
   text-align: left;
 }
 
+div#buy-tickets p {
+  float: left;
+  margin-left: 10px;
+}
+#purchase {
+  float: left;
+}
+#purchase a {
+  margin: 0;
+  width: 118px;
+}
 #listing-links-col img {
   margin-right: 15px;
 }
