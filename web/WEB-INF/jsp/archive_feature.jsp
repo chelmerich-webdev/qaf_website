@@ -38,7 +38,7 @@
               <c:forEach var="item" items="${feature.links}" varStatus="status">
                 <li${status.count eq size ? ' class="last"': ''}>
                   <c:choose>
-                    <c:when test="${!fn:contains(item.url, 'http')}">
+                    <c:when test="${item.youTubeId}">
                       <qaf:archive-youtube-embed link="${item}"/>
                     </c:when>
                     <c:otherwise>

@@ -1,5 +1,7 @@
 package com.queerartfilm.film;
 
+import java.util.regex.Pattern;
+
 /**
  * 
  * 
@@ -7,6 +9,7 @@ package com.queerartfilm.film;
  * @author ch67dev@gmail.com
  */
 public class Link {
+    private static final String YOU_TUBE_ID_REGEX = "[a-zA-Z0-9_-]{11}";
     private String label;
     private String url;
 
@@ -34,5 +37,8 @@ public class Link {
         this.url = url;
     }
 
+    public boolean isYouTubeId() {
+        return Pattern.matches(YOU_TUBE_ID_REGEX, this.url);
+    }
     
 }
