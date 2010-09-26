@@ -10,7 +10,7 @@
     <c:param name="body" value="${current.subscribeEmailBody}" />
   </c:url>--%>
 <div id="footer1" >
-  <p class="left">For email updates, <a href='<c:out value="${fn:replace(maillink,' ','%20')}" />' >join the ${initParam['com.queerartfilm.wordmark']} mailing list</a></p>
+  <p class="left">For email updates, <strong><a href='<c:out value="${fn:replace(maillink,' ','%20')}" />' >join the ${initParam['com.queerartfilm.wordmark']} mailing list</a></strong></p>
     <a class="right" href='<c:out value="${current.facebookUrl}"/>' ><img src="/images/f_logo.png" alt="Facebook"/></a><p class="right">Friend us on Facebook</p>
 <%--    <form id="mailing" name="mailing" action="" method="POST">
         <input type="text" name="email" id="email"/>
