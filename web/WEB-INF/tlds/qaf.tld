@@ -57,7 +57,7 @@
     <path>/WEB-INF/tags/qaf/archive-youtube-embed.tag</path>
   </tag-file>
   <tag-file>
-    <name>archivemore_info</name>
+    <name>archive_more_info</name>
     <path>/WEB-INF/tags/qaf/archive_more_info.tag</path>
   </tag-file>
   <function>
