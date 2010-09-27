@@ -25,7 +25,7 @@ public class FeaturedFilmArchiveServlet extends HttpServlet {
     private static final String NOT_FOUND_MSG =
             "The film ID <strong>\"%s\"</strong> was not found.<br/>"
             + "Please look through the %s Archive below.";
-    private static final String FILM_ATTR = "feature";
+    private static final String FILM_ATTR = "ff";
     private static final String ARCHIVE_DIR = "/films";
 
     /**

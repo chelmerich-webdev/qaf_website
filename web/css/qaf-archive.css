@@ -89,7 +89,28 @@ li.archive-item h6 {
   /*overflow: auto;*/
 }
 
-#listing-links-col {
+
+
+div#buy-tickets p {
+  float: left;
+  margin-left: 10px;
+}
+#purchase {
+  float: left;
+}
+#purchase a {
+  position: relative;
+  top: -3px;
+  width: 118px;
+  height: 14px;
+  margin: 0;
+  padding: 4px 0 0 10px;
+  /*font-size: 70%;*/
+  /*font-weight: normal;*/
+  /*line-height: 100%;*/
+}
+
+#more-info-col {
   float:right;
   /*width: 182px; 202px;*/
   width: 200px;
@@ -114,50 +135,33 @@ li.archive-item h6 {
   text-align: left;
 }
 
-div#buy-tickets p {
-  float: left;
-  margin-left: 10px;
-}
-#purchase {
-  float: left;
-}
-#purchase a {
-  position: relative;
-  top: -3px;
-  width: 118px;
-  height: 14px;
-  margin: 0;
-  padding: 4px 0 0 10px;
-  /*font-size: 70%;*/
-  /*font-weight: normal;*/
-  /*line-height: 100%;*/
-}
-#listing-links-col img {
+#more-info-col img {
   margin-right: 15px;
 }
 
-#listing-links-col ul {
+#more-info-col ul {
   text-align: left;
   font-weight: bold;
   font-size: 90%;
 }
-#listing-links-col ul li {
+
+#more-info-col ul li {
   padding-top:10px;
   /*padding: 10px 0;*/
   border-bottom: 1px solid #999;
 }
-#listing-links-col ul li p {
+#more-info-col ul li p {
   padding-bottom: 10px;
 }
 
-#listing-links-col ul li p a {
+#more-info-col ul li p a {
   border: 0;
 }
-#listing-links-col ul li.last {
+#more-info-col ul li.last {
   border: 0px;
 }
 
-#listing-links-col object {
+#more-info-col object {
   padding-bottom: 10px;
   width: 200px;
 }
