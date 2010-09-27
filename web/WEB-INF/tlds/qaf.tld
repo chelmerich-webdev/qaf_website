@@ -68,6 +68,10 @@
     <name>archive-purchase-tickets</name>
     <path>/WEB-INF/tags/qaf/archive-purchase-tickets.tag</path>
   </tag-file>
+  <tag-file>
+    <name>archive-header</name>
+    <path>/WEB-INF/tags/qaf/archive-header.tag</path>
+  </tag-file>
   <function>
     <name>getAssignable</name>
     <function-class>com.queerartfilm.dao.FeaturedFilmDAO</function-class>
