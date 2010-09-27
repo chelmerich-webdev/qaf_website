@@ -60,6 +60,14 @@
     <name>archive_more_info</name>
     <path>/WEB-INF/tags/qaf/archive_more_info.tag</path>
   </tag-file>
+  <tag-file>
+    <name>archive-content</name>
+    <path>/WEB-INF/tags/qaf/archive-content.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>archive-purchase-tickets</name>
+    <path>/WEB-INF/tags/qaf/archive-purchase-tickets.tag</path>
+  </tag-file>
   <function>
     <name>getAssignable</name>
     <function-class>com.queerartfilm.dao.FeaturedFilmDAO</function-class>
