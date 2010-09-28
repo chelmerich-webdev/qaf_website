@@ -33,9 +33,11 @@
         <h3>${curSeries} <span id="at">@</span>
           <img src="/images/ifc_center_logo_small.png" alt="IFC Center" /></h3>
       </div>
+      <div id="feature-image">
         <a href="${menusMap['archive'][1]}/${curFeature.urlKey}">
-        <img src="/images/${curFeature.urlKey}_large.png" alt="${curFeature.title}" width="500" height="240"/></a>
-
+          <img src="/images/${curFeature.urlKey}_large.png" alt="${curFeature.title}" />
+        </a>
+      </div>
       <div id="info-left">
         <c:set var="showdate" value="${curFeature.screening.date}"/>
         <%--<p class="redtext">${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</p>--%>
