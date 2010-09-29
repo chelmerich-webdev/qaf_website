@@ -13,7 +13,8 @@
   <body>
     <qaf:body-top-include />
     <p id="admin-message" class="${form.valid ? 'success' : 'error'}">${form.messages.result}</p>
-    <div id="simple-page">
+  
+          <div id="simple-page">
       <h4>${initParam['com.queerartfilm.wordmark']} Series: ${param['id'] eq 'new' || empty param['id'] ? 'New' : qafSeries}</h4>
 
       <form method="post" action="/manage/qafseries/update?id=${empty qafSeries.id || qafSeries.id <= 0 ? 'new' : qafSeries.id}">
@@ -36,12 +37,12 @@
             <ul>
               <c:forEach var="ff" items="${featureDAO.allItems}" varStatus="status">
                 <%--<li>--%>
-                  <c:choose>
+                <c:choose>
 
-                    <%--if ff is has no parent, show it--%>
-                    <c:when test="${ff['assigned'] eq false}" >
+                  <%--if ff is has no parent, show it--%>
+                  <c:when test="${ff['assigned'] eq false}" >
                     <li><input type="checkbox" name="${field}" id="ckbx${status.count}"
-                             class="checkbox" value="${ff.id}"/>
+                               class="checkbox" value="${ff.id}"/>
                       <label for="ckbx${status.count}">${ff}</label></li>
                     </c:when>
                     <%--if ff has a parent, then see if it is this qafSeries--%>
@@ -54,15 +55,15 @@
                           <c:if test="${childKey.id eq ff.id}">
                             <%--if so, add as a selected checkbox--%>
                           <li><input type="checkbox" name="${field}" id="ckbx${status.count}"
-                                   class="checkbox" value="${ff.id}" checked="checked"/>
+                                     class="checkbox" value="${ff.id}" checked="checked"/>
                             <label for="ckbx${status.count}">${ff}</label></li>
                           </c:if>
                         </c:forEach>
                       </c:if>
                     </c:otherwise>
                   </c:choose>
-                <%--</li>--%>
-              </c:forEach>
+                  <%--</li>--%>
+                </c:forEach>
             </ul>
           </fieldset>
           <span class="error clear">${form.messages[field]}</span>
@@ -88,6 +89,7 @@
           </c:if>
         </div>
       </form>
+          <p class="withoutLabel">Note: Selecting films for this series will publish the films' pages to ALL FILMS.<br>You may want to verify first that those pages' data and images are up-to-date.</p>
     </div>
     <script type="text/javascript">
       setHighlight('${form != null ? form.highlight : ''}');
