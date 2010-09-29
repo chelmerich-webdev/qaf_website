@@ -101,10 +101,32 @@
         <filter-name>Trim Whitespace</filter-name>
         <filter-class>com.cj.trim.trimFilter</filter-class>
     </filter>
+    <filter>
+        <description>Adds header values to the response that are specified as init parameters for this filter. </description>
+        <filter-name>Response Header Filter</filter-name>
+        <filter-class>com.queerartfilm.web.ResponseHeaderFilter</filter-class>
+        <init-param>
+            <description>Client-side cache max age in seconds.</description>
+            <param-name>Cache-Control</param-name>
+            <param-value>max-age=30</param-value>
+        </init-param>
+    </filter>
     <filter-mapping>
         <filter-name>Trim Whitespace</filter-name>
         <url-pattern>*.jsp</url-pattern>
         <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Response Header Filter</filter-name>
+        <servlet-name>Simple Menu Servlet</servlet-name>
+        <servlet-name>Display Featured Films on Homepage</servlet-name>
+        <servlet-name>Display Featured Films in Archive</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Response Header Filter</filter-name>
+        <url-pattern>index.jsp</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
     <listener>
         <description>Initialzes web form list attributes</description>
