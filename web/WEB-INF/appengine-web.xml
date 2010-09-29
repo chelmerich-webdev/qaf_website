@@ -3,7 +3,7 @@
     <application>qafwebsite</application>
     <version>5</version>
     <static-files>
-        <include expiration="4h" path="/images/*"/>
+        <include expiration="1h" path="/images/*"/>
         <include path="*.css"/>
         <include path="*.js"/>
         <include expiration="1d" path="*.ico"/>

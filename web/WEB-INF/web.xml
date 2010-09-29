@@ -108,7 +108,7 @@
         <init-param>
             <description>Client-side cache max age in seconds.</description>
             <param-name>Cache-Control</param-name>
-            <param-value>max-age=30</param-value>
+            <param-value>max-age=6000</param-value>
         </init-param>
     </filter>
     <filter-mapping>
