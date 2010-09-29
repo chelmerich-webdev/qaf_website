@@ -35,14 +35,14 @@
           <fieldset class="screenings">
             <ul>
               <c:forEach var="ff" items="${featureDAO.allItems}" varStatus="status">
-                <li>
+                <%--<li>--%>
                   <c:choose>
 
                     <%--if ff is has no parent, show it--%>
                     <c:when test="${ff['assigned'] eq false}" >
-                      <input type="checkbox" name="${field}" id="ckbx${status.count}"
+                    <li><input type="checkbox" name="${field}" id="ckbx${status.count}"
                              class="checkbox" value="${ff.id}"/>
-                      <label for="ckbx${status.count}">${ff}</label>
+                      <label for="ckbx${status.count}">${ff}</label></li>
                     </c:when>
                     <%--if ff has a parent, then see if it is this qafSeries--%>
                     <c:otherwise>
@@ -53,15 +53,15 @@
                           <%--see if its id is the same as the current assigned ff id--%>
                           <c:if test="${childKey.id eq ff.id}">
                             <%--if so, add as a selected checkbox--%>
-                            <input type="checkbox" name="${field}" id="ckbx${status.count}"
+                          <li><input type="checkbox" name="${field}" id="ckbx${status.count}"
                                    class="checkbox" value="${ff.id}" checked="checked"/>
-                            <label for="ckbx${status.count}">${ff}</label>
+                            <label for="ckbx${status.count}">${ff}</label></li>
                           </c:if>
                         </c:forEach>
                       </c:if>
                     </c:otherwise>
                   </c:choose>
-                </li>
+                <%--</li>--%>
               </c:forEach>
             </ul>
           </fieldset>

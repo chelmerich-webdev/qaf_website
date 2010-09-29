@@ -6,8 +6,8 @@ public enum Venue {
 
     IFC_CENTER("IFC Center", "323 Sixth Avenue",
     "at West 3rd St", new PhoneNumber("212-924-7771")),
-    ANGELIKA("Angelika", "", "", new PhoneNumber("212-555-1212")),
-    RADIO_CITY("Radio City", "", "", new PhoneNumber("212-555-1212"));
+    _92Y_TRIBECA("92YTribeca", "200 Hudson St.", "", new PhoneNumber("212-601-1000")),;
+    
     private String title;
     private String address1;
     private String address2;
