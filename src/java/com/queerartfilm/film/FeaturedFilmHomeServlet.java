@@ -1,11 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.queerartfilm.film;
 
 import com.queerartfilm.dao.FeaturedFilmDAO;
-import com.queerartfilm.model.Utils;
 import com.queerartfilm.web.Config;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -14,14 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Homepage servlet. Displays films that are part of the current QAF series and
+ * where a film's valid urlKey in the url allows it to be the "selectedFilm".
  *
- * @author ch67dotnet
+ * @author Curt Helmerich
+ * @author ch67dev@gmail.com
  */
 public class FeaturedFilmHomeServlet extends HttpServlet {
 
     private static final String VIEW = "/index.jsp";
-    private static final String CURRENT_ATTR = "current";
-    private static final String FEATURED_FILM = "selectedFeature";
+    private static final String CONFIG_ATTR = "current";
+    private static final String SELECTED_FILM = "selectedFilm";
 
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -32,29 +30,25 @@ public class FeaturedFilmHomeServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
 
-//        EventDAO eventDAO = new EventDAO();
-        FeaturedFilmDAO featureDAO = new FeaturedFilmDAO();
-        this.getServletContext().getAttribute("current");
+        FeaturedFilmDAO dao = new FeaturedFilmDAO();
+        String selectedKey = request.getPathInfo();
+        FeaturedFilm selectedFilm = null;
 
-        String key = Utils.getLastUriToken(request);
-        Config currentConfig = (Config) this.getServletContext().getAttribute(CURRENT_ATTR);
-//        Film defaultFeature = filmDAO.find(eventDAO.find(currentConfig.getEvent()).getFilmKey());
-        FeaturedFilm defaultFeature = featureDAO.find(currentConfig.getFeaturedFilmKey().getId());
-
-        FeaturedFilm selectedFeature = null;
-        if (!(CURRENT_ATTR).equals(key) || (CURRENT_ATTR + "/").equals(key)) {
-            if (key != null && !"".equals(key)) {
-                selectedFeature = featureDAO.query().filter("urlKey", key).get();
-            }
+        if (selectedKey != null && selectedKey.length() > 1) {
+            // strip off leading slash
+            selectedKey = selectedKey.substring(1);
+            // query on urlKey field, as id is a long
+            selectedFilm = dao.query().filter("urlKey", selectedKey).get();
         }
 
-        if (selectedFeature == null) {
-            selectedFeature = defaultFeature;
+        // assign default film is none found from url key
+        if (selectedFilm == null) {
+            Config defaults = (Config) this.getServletContext().getAttribute(CONFIG_ATTR);
+            selectedFilm = dao.find(defaults.getFeaturedFilmKey().getId());
         }
 
-        request.setAttribute(FEATURED_FILM, selectedFeature);
+        request.setAttribute(SELECTED_FILM, selectedFilm);
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
 
