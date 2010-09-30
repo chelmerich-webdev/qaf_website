@@ -72,6 +72,17 @@
     <name>archive-header</name>
     <path>/WEB-INF/tags/qaf/archive-header.tag</path>
   </tag-file>
+  <tag-file>
+    <name>film-link</name>
+    <path>/WEB-INF/tags/qaf/film-link.tag</path>
+  </tag-file>
+
+  <function>
+    <name>createId</name>
+    <function-class>com.queerartfilm.model.Utils</function-class>
+    <function-signature>java.lang.String createId(java.lang.String)</function-signature>
+  </function>
+
   <function>
     <name>getAssignable</name>
     <function-class>com.queerartfilm.dao.FeaturedFilmDAO</function-class>

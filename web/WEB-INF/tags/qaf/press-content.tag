@@ -1,5 +1,5 @@
 <%@tag description="put the tag description here" pageEncoding="UTF-8" isELIgnored="false" %>
-<%@taglib uri="qafTags" prefix="qaf" %>
+<%@taglib prefix="qaf" uri="qafTags" %>
 <div id="press">
   <ul class="press">
     <li><h5>About ${initParam['com.queerartfilm.wordmark']}</h5></li>
@@ -13,13 +13,13 @@
     </li>
   </ul>
   <ul class="press">
-    <li><h5>About <a class="qaf-film" href="${menuMap['archive']}/times-square">Times Square</a></h5></li>
+    <li><h5>About <qaf:film-link film="Times Square"/></h5></li>
     <li>
-      <p><a href="http://www.nypress.com/article-21250-bash-compactor-they-donrst-wanna-be-sedated.html">Genny Visco writes in <cite>Time Out New York</cite></a> on the Ridykeulous screening of <a class="qaf-film" href="${menuMap['archive']}/times-square">Times Square</a></p>
+      <p><a href="http://www.nypress.com/article-21250-bash-compactor-they-donrst-wanna-be-sedated.html">Genny Visco writes in <cite>Time Out New York</cite></a> on the Ridykeulous screening of <qaf:film-link film="Times Square"/></p>
     </li>
   </ul>
   <ul class="press">
-    <li><h5>About the films of Charles Ludlam, restored by ${initParam['com.queerartfilm.wordmark']}</h5></li>
+    <li><h5>About the films of Charles Ludlam, restored by ${initParam['com.queerartfilm.wordmark']} </h5></li>
     <li>
       <p><a href="http://www.outfest.org/legacy/anniversary/ludlam.php">The Outfest Legacy Project Charles Ludlam Collection</a></p>
     </li>

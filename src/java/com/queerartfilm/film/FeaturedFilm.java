@@ -199,7 +199,7 @@ public class FeaturedFilm implements Serializable, Comparable<FeaturedFilm> {
      * This setter sets a derived value so takes no parameters.
      */
     private void setUrlKey() {
-        this.urlKey = Utils.createID(this.title);
+        this.urlKey = Utils.createId(this.title);
     }
 
     public Integer getReleaseYear() {

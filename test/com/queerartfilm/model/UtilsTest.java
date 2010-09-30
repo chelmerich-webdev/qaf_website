@@ -33,10 +33,10 @@ public class UtilsTest {
     }
 
     private void testID(String title, String expected) {
-        String actual = Utils.createID(title);
+        String actual = Utils.createId(title);
         assertEquals(actual, expected, actual);
         // test that ID itself remains unchanged when passed in as a argument
-        assertEquals(actual, Utils.createID(title));
+        assertEquals(actual, Utils.createId(title));
 
 
     }

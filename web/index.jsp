@@ -2,9 +2,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="qaf" uri="qafTags" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<c:set var="curSeries" value="${qaf:getQAFSeriesByKey(current.qafSeriesKey)}" scope="page"/>
-<c:set var="curFeature" value="${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}" scope="page" />
-<c:if test="${selectedFeature != null}"><c:set var="curFeature" value="${selectedFeature}" /></c:if>
+<c:set var="series" value="${qaf:getQAFSeriesByKey(current.qafSeriesKey)}" scope="page"/>
+<c:set var="feature" value="${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}" scope="page" />
+<c:if test="${selectedFeature != null}"><c:set var="feature" value="${selectedFeature}" /></c:if>
 <!DOCTYPE html>
 <html> 
   <head>
@@ -16,47 +16,45 @@
     <qaf:body-top-include />
 
     <div id="series-col" >
-      <c:forEach var="featureKey" items="${curSeries.filmKeysAsListAsc}" varStatus="status">
-        <c:set var="feature" value="${qaf:getFeaturedFilmByKey(featureKey)}" />
-        <c:set var="showdate" value="${feature.screening.date}"/>
+      <c:forEach var="featureKey" items="${series.filmKeysAsListAsc}" varStatus="status">
+        <c:set var="ff" value="${qaf:getFeaturedFilmByKey(featureKey)}" />
+        <c:set var="showdate" value="${ff.screening.date}"/>
         <div class="series-listing">
           <%--<div id="sprite-${status.count}" class="sprite"><a href="${menusMap['home'][1]}/${feature.urlKey}"></a></div>--%>
-          <a href="${menusMap['home'][1]}/${feature.urlKey}"><img class="${feature.urlKey != curFeature.urlKey ? 'rollover' : ''}" src="/images/${feature.urlKey}_vert${feature.urlKey eq curFeature.urlKey ? '-hover' : ''}.png" height="90" width="45" alt="${feature.title}" /></a>
-          <h6>${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</h6>
-          <h6>${feature.presenter} presents</h6>
-          <h2 class="${feature.urlKey eq curFeature.urlKey ? 'red-rollover' : 'gray-rollover'}" ><a href="${menusMap['home'][1]}/${feature.urlKey}">${feature.title}</a></h2>
+          <c:set var="currentTest" value="${ff.urlKey == feature.urlKey}" />
+          <a href="${menusMap['home'][1]}/${ff.urlKey}"><img class="${!currentTest ? 'rollover' : ''}" src="/images/${ff.urlKey}_vert${currentTest ? '-hover' : ''}.png" alt="${ff.title}" /></a>
+          <h6>${qaf:getDate(showdate)}</h6>
+          <h6>${ff.presenter} presents</h6>
+          <h2 class="${currentTest ? 'red-rollover' : 'gray-rollover'}" ><qaf:film-link film="${ff.title}"/></h2>
         </div>
       </c:forEach>
     </div>
     <div id="featured-film">
       <div id="seriesbar">
-        <h3>${curSeries} <span id="at">@</span>
+        <h3>${series} <span id="at">@</span>
           <img src="/images/ifc_center_logo_small.png" alt="IFC Center" /></h3>
       </div>
       <div id="feature-image">
-        <a href="${menusMap['archive'][1]}/${curFeature.urlKey}">
-          <img src="/images/${curFeature.urlKey}_large.png" alt="${curFeature.title}" />
-        </a>
+          <qaf:film-link film="${feature.title}"
+                         label="<img src='/images/${feature.urlKey}_large.png' alt='${feature.title}' />" />
       </div>
       <div id="info-left">
-        <c:set var="showdate" value="${curFeature.screening.date}"/>
-        <%--<p class="redtext">${qaf:getMonth(showdate)} ${qaf:getDay(showdate)}, ${qaf:getYear(showdate)}</p>--%>
+        <c:set var="showdate" value="${feature.screening.date}"/>
         <p class="redtext">${qaf:getDate(showdate)}</p>
-        <%--<p><span class="graytext nobold">${qaf:getHour(showdate)}:${qaf:getMinute(showdate)}${qaf:getAmpm(showdate)}</span>--%>
         <p><span class="graytext nobold">${qaf:getTime(showdate)}</span>
-          <c:if test="${!empty curFeature.screening.secondTime}" >
-            <span class="graytext nobold"> and ${curFeature.screening.secondTime}</span>
+          <c:if test="${!empty feature.screening.secondTime}" >
+            <span class="graytext nobold"> and ${feature.screening.secondTime}</span>
           </c:if>
         </p><br/>
         <p>
-          ${curFeature.screening.venue}<br/>
-          ${curFeature.screening.venue.address1}<br/>
-          ${curFeature.screening.venue.address2}<br/>
-          ${curFeature.screening.venue.phoneNumber.number}
+          ${feature.screening.venue}<br/>
+          ${feature.screening.venue.address1}<br/>
+          ${feature.screening.venue.address2}<br/>
+          ${feature.screening.venue.phoneNumber.number}
         </p>
-        <c:if test="${curFeature.screening.onSale}"> <%--&& !empty curFeature.screening.purchaseUrl}">--%>
+        <c:if test="${feature.screening.onSale}">
           <div id="purchase">
-            <a href="${fn:escapeXml(curFeature.screening.purchaseUrl)}">Purchase Tickets</a>
+            <a href="${fn:escapeXml(feature.screening.purchaseUrl)}">Purchase Tickets</a>
           </div>
         </c:if>
       </div>
@@ -64,13 +62,16 @@
         <img src="/images/qaf-triangle_large.png" alt="triangle"/>
       </div>
       <div id="info-center">
-        <p id="info-center-presenter">${curFeature.presenter} presents</p>
-        <h1 class="rollover"><a href="${menusMap['archive'][1]}/${curFeature.urlKey}">${curFeature.title}</a></h1>
-        <h6>(${curFeature.releaseYear}, ${curFeature.director})</h6>
+        <p id="info-center-presenter">${feature.presenter} presents</p>
+        <h1 class="rollover"><qaf:film-link film="${feature.title}" /></h1>
+        <h6>(${feature.releaseYear}, ${feature.director})</h6>
         <div id="info-center-text">
-          <p>${fn:substring(curFeature.synopsis, 0, 375)} . . .</p>
+          <p>${fn:substring(feature.synopsis, 0, 375)} . . .</p>
           <div id="synopsis-footer">
-            <div id="more-info"><a href="${menusMap['archive'][1]}/${curFeature.urlKey}">More Info</a></div><img src="/images/qaf-triangle_small.png" alt="triangle"/>
+            <div id="more-info">
+              <qaf:film-link film="${feature.title}" label="More Info"/>
+            </div>
+            <img src="/images/qaf-triangle_small.png" alt="triangle"/>
           </div>
         </div>
       </div>

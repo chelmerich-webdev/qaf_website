@@ -1,7 +1,6 @@
 package com.queerartfilm.model;
 
 import com.google.common.base.Function;
-import com.queerartfilm.validation.IsDateP;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Date;
@@ -18,7 +17,7 @@ public class Utils {
 
     private static final char HYPHEN = '-';
     private static final String[] notKeywords = {"a-", "an-", "the-" };
-    private static final Function<String, String> createIDFunction;
+    private static final Function<String, String> createIdFunction;
 
 
     public static String doubleZero(int n) {
@@ -27,8 +26,9 @@ public class Utils {
     }
     
     static {
-        createIDFunction = new Function<String, String>() {
+        createIdFunction = new Function<String, String>() {
 
+            @Override
             public String apply(String id) {
                 boolean isEmpty = true;
                 StringBuilder sb = new StringBuilder();
@@ -68,16 +68,16 @@ public class Utils {
             }
         };
     }
-    public static String createID(String... ids) {
+    public static String createId(String... ids) {
         StringBuilder sb = new StringBuilder();
         for (String id : ids) {
             sb.append(id + HYPHEN);
         }
-        return createID(sb.toString());
+        return createId(sb.toString());
     }
 
-    public static String createID(String id) {
-        return createIDFunction.apply(id);
+    public static String createId(String id) {
+        return createIdFunction.apply(id);
     }
     // default format for date strings; 6/30/09 8:00PM
     public static final DateFormat formatter = DateFormat.getDateTimeInstance(
