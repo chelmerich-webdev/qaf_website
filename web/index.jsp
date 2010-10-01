@@ -1,10 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false" session="false"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="qaf" uri="qafTags" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@include file="/WEB-INF/jsp/includes.jsp" %>
 <c:set var="series" value="${qaf:getQAFSeriesByKey(current.qafSeriesKey)}" scope="page"/>
-<%--<c:set var="feature" value="${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}" scope="page" />
-<c:if test="${selectedFilm != null}"><c:set var="feature" value="${selectedFilm}" /></c:if>--%>
 <c:if test="${empty selectedFilm}">
   <c:set var="selectedFilm" >${qaf:getFeaturedFilmByKey(current.featuredFilmKey)}</c:set>
 </c:if>

@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@page import="com.google.appengine.api.users.*" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="qaf" uri="qafTags" %>
+<%@include file="/WEB-INF/jsp/includes.jsp" %>
 <jsp:useBean id="featureDAO" class="com.queerartfilm.dao.FeaturedFilmDAO" />
 <jsp:useBean id="qafSeriesDAO" class="com.queerartfilm.dao.QAFSeriesDAO" />
 <!DOCTYPE html>

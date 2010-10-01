@@ -1,7 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@taglib prefix="qaf" uri="qafTags" %>
+<%@include file="/WEB-INF/jsp/includes.jsp" %>
 <jsp:useBean id="featureDAO" class="com.queerartfilm.dao.FeaturedFilmDAO" scope="application"/>
 <!DOCTYPE html>
 <html>

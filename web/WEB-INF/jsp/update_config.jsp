@@ -1,7 +1,5 @@
 <%@page pageEncoding="UTF-8" contentType="text/html" isELIgnored="false" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@taglib prefix="qaf" uri="qafTags" %>
+<%@include file="/WEB-INF/jsp/includes.jsp" %>
 <jsp:useBean id="qafSeriesDAO" class="com.queerartfilm.dao.QAFSeriesDAO" scope="request" />
 <jsp:useBean id="featureDAO" class="com.queerartfilm.dao.FeaturedFilmDAO" scope="request" />
 <jsp:useBean id="now" class="java.util.Date" scope="request" />

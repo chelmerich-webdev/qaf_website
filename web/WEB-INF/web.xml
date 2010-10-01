@@ -202,14 +202,6 @@
         <url-pattern>/admin/restricted</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Manage Landing Page</servlet-name>
-        <url-pattern>/manage</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Update Config</servlet-name>
         <url-pattern>/manage/config/update</url-pattern>
     </servlet-mapping>
@@ -252,6 +244,14 @@
         <servlet-name>Display Featured Films on Homepage</servlet-name>
         <url-pattern>/current/*</url-pattern>
         <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Manage Landing Page</servlet-name>
+        <url-pattern>/manage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

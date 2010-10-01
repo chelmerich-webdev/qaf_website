@@ -1,7 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" isELIgnored="false"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@taglib prefix="qaf" uri="qafTags" %>
+<%@include file="/WEB-INF/jsp/includes.jsp" %>
 <jsp:useBean id="feature" class="com.queerartfilm.film.FeaturedFilm" scope="request" />
 <jsp:useBean id="seriesDAO" class="com.queerartfilm.dao.QAFSeriesDAO" />
 <c:set var="disabled" value="disabled=\"disabled\" class=\"disabled\""/>
