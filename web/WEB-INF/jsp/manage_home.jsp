@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.form.css']}" />
+    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.form']}" />
     <script type="text/javascript" src="/qaf_form.js"></script>
     <qaf:head-include />
   </head>

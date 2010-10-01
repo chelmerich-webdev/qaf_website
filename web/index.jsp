@@ -8,7 +8,7 @@
 <html> 
   <head>
     <qaf:head-include />
-    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.homepage.css']}" >
+    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.homepage']}" >
     <script type="text/javascript" src="/jquery-1.4.2.min.js"></script>
   </head>
   <body>

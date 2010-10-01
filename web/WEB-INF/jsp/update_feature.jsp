@@ -7,7 +7,7 @@
 <html>
   <head>
     <qaf:head-include />
-    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.form.css']}" />
+    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.form']}" />
     <script type="text/javascript" src="/qaf_form.js"></script>
   </head>
   <body>
@@ -195,7 +195,7 @@
             <c:set var="field" value="year"/>
             <label>Year</label>
             <select name="${parentfield}.${field}" size="1" ${form.valid ? disabled : ''}>
-              <c:forEach var="item" begin="${initParam['com.queerartfilm.startyear']}" end="${current.year + 1}" step="1">
+              <c:forEach var="item" begin="${initParam['com.queerartfilm.date.year.qafstart']}" end="${current.year + 1}" step="1">
                 <option ${qaf:getYear(feature.screening.date) eq item ? 'selected' : ''}>${item}</option>
               </c:forEach>
             </select>

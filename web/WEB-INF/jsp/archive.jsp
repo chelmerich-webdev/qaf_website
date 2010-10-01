@@ -5,7 +5,7 @@
 <html>
   <head>
     <qaf:head-include />
-    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.archive.css']}" />
+    <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.archive']}" />
   </head>
   <body>
     <qaf:body-top-include />

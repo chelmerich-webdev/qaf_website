@@ -17,7 +17,7 @@
     </context-param>
     <context-param>
         <description>YUI Library CSS reset</description>
-        <param-name>com.yahooapis.yui.reset.css</param-name>
+        <param-name>com.queerartfilm.reset.css</param-name>
         <param-value>http://yui.yahooapis.com/2.8.1/build/reset/reset-min.css</param-value>
     </context-param>
     <context-param>
@@ -43,34 +43,24 @@
         <param-value>America/New_York</param-value>
     </context-param>
     <context-param>
-        <description>Earliest year a film was realeased</description>
-        <param-name>com.queerartfilm.film.year.start</param-name>
-        <param-value>1900</param-value>
-    </context-param>
-    <context-param>
         <description>Year that Queer|Art|Film started</description>
-        <param-name>com.queerartfilm.startyear</param-name>
+        <param-name>com.queerartfilm.date.year.qafstart</param-name>
         <param-value>2009</param-value>
     </context-param>
     <context-param>
-        <description>menu urls</description>
-        <param-name>com.queerartfilm.menu.uris</param-name>
-        <param-value>/current,/about,/films,/press,/contact</param-value>
-    </context-param>
-    <context-param>
-        <param-name>com.queerartfilm.homepage.css</param-name>
+        <param-name>com.queerartfilm.css.homepage</param-name>
         <param-value>/css/qaf-homepage.css</param-value>
     </context-param>
     <context-param>
-        <param-name>com.queerartfilm.simple.css</param-name>
+        <param-name>com.queerartfilm.css.simple</param-name>
         <param-value>/css/qaf-simple.css</param-value>
     </context-param>
     <context-param>
-        <param-name>com.queerartfilm.form.css</param-name>
+        <param-name>com.queerartfilm.css.form</param-name>
         <param-value>/css/qaf-form.css</param-value>
     </context-param>
     <context-param>
-        <param-name>com.queerartfilm.archive.css</param-name>
+        <param-name>com.queerartfilm.css.archive</param-name>
         <param-value>/css/qaf-archive.css</param-value>
     </context-param>
     <context-param>
