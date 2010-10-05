@@ -13,7 +13,7 @@
   </head>
   <body>
     <qaf:body-top-include />
-
+    ${paths}
     <div id="series-col" >
       <c:forEach var="key" items="${series.filmKeysAsListAsc}" varStatus="status">
         <c:set var="seriesFilm" value="${qaf:getFeaturedFilmByKey(key)}" />
