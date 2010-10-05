@@ -188,10 +188,6 @@
         <servlet-name>Persist All FeaturedFilms</servlet-name>
         <servlet-class>com.queerartfilm.film.FeaturedFilmPersistServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Show Source Servlet</servlet-name>
-        <servlet-class>com.queerartfilm.web.ShowSourceServlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>Update Config</servlet-name>
         <url-pattern>/manage/config/update</url-pattern>
@@ -235,10 +231,6 @@
         <servlet-name>Website Data Access</servlet-name>
         <url-pattern>/login</url-pattern>
         <url-pattern>/manage</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Show Source Servlet</servlet-name>
-        <url-pattern>/showsource</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Display Featured Films on Homepage</servlet-name>
