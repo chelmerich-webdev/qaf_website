@@ -2,7 +2,6 @@ package com.queerartfilm.web;
 
 import com.google.appengine.api.memcache.Expiration;
 import com.queerartfilm.dao.MemcacheDAO;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -19,7 +18,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *  
+ * Retrieves previously rendered page from App Engine Memcache, 
+ * and stores page first if not present. Expiration duration is set as an
+ * Initialization Parameter for this <code>Filter</code> and passed in as
+ * an argument to the <code>MemcacheDAO</code>.
  *
  * @author Curt Helmerich
  * @author ch67dev@gmail.com
@@ -29,8 +31,10 @@ public class CacheFilter implements Filter {
     private static final Logger logger = Logger.getLogger(CacheFilter.class.getName());
     ServletContext sc;
     FilterConfig fc;
-//    long cacheTimeout = Long.MAX_VALUE;
-    private static final MemcacheDAO dao = new MemcacheDAO(Expiration.byDeltaSeconds(60));
+    private MemcacheDAO dao;
+    private static final String EXPIRATION_PARAM = "secondsToExpire";
+    private static final String ENCODING = "UTF-8";
+    private static final String CONTENT_TYPE = "text/html";
 
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
@@ -43,27 +47,28 @@ public class CacheFilter implements Filter {
 
         try {
             if (page == null) {
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                CacheResponseWrapper wrappedResponse = new CacheResponseWrapper(response, baos);
+                BufferedResponseWrapper wrappedResponse = new BufferedResponseWrapper(response);
                 chain.doFilter(req, wrappedResponse);
                 // Put rendered page in cache
-                dao.put(key, "<!-- Cached: " + new Date() + " -->\n" + baos.toString());
+                String marker = "<!-- Cached: " + new Date() + " -->\n";
+                dao.put(key, marker + wrappedResponse.getBufferAsString());
             }
-            outputPageFromCache(request, response, key);
+            
+            outputPageFromCache(response, key);
+
         } catch (IOException ioex) {
-            logger.warning(ioex.getMessage());
-            ioex.printStackTrace();
+            logger.log(Level.SEVERE, null, ioex);
         }
 
     }
 
-    private void outputPageFromCache(HttpServletRequest request, HttpServletResponse response, String key) {
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
-        
-        String html = (String)dao.get(key);
+    private void outputPageFromCache(HttpServletResponse response, String key) {
+        response.setContentType(CONTENT_TYPE);
+        response.setCharacterEncoding(ENCODING);
+
+        String html = (String) dao.get(key);
         response.setContentLength(html.length());
-        
+
         try {
             PrintWriter out = response.getWriter();
             out.print(html);
@@ -77,15 +82,14 @@ public class CacheFilter implements Filter {
     public void init(FilterConfig filterConfig) {
         this.fc = filterConfig;
         this.sc = filterConfig.getServletContext();
-//        String ct = fc.getInitParameter("cacheTimeout");
-//        if (ct != null) {
-//            cacheTimeout = 60 * 1000 * Long.parseLong(ct);
-//        }
+        int secondsToExpire = Integer.parseInt(fc.getInitParameter(EXPIRATION_PARAM));
+        this.dao = new MemcacheDAO(Expiration.byDeltaSeconds(secondsToExpire));
     }
 
     @Override
     public void destroy() {
         this.sc = null;
         this.fc = null;
+        this.dao = null;
     }
 }
