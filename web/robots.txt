@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /
+User-agent: Googlebot
+Disallow: /css/
+Disallow: /images/
+Disallow: /login/
+Disallow: /manage/
+Disallow: /*.js
+User-agent: Googlebot-Image
+Disallow: / 
