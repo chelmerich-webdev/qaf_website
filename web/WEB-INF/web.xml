@@ -108,7 +108,7 @@
         <init-param>
             <description>Number of seconds that MemCache'd values are to expire.</description>
             <param-name>secondsToExpire</param-name>
-            <param-value>60</param-value>
+            <param-value>600</param-value>
         </init-param>
     </filter>
     <filter-mapping>
