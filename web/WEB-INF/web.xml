@@ -116,17 +116,6 @@
         <url-pattern>*.jsp</url-pattern>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
-    <filter-mapping>
-        <filter-name>Response Header Filter</filter-name>
-        <url-pattern>*.jsp</url-pattern>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>Cache Filter</filter-name>
-        <servlet-name>Display Featured Films on Homepage</servlet-name>
-        <dispatcher>REQUEST</dispatcher>
-        <dispatcher>FORWARD</dispatcher>
-    </filter-mapping>
     <listener>
         <description>Initialzes web form list attributes</description>
         <listener-class>com.queerartfilm.web.ListInitializerListener</listener-class>
