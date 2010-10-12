@@ -48,6 +48,7 @@ public class FeaturedFilmDeleteServlet extends HttpServlet {
 
         String idString = FormUtil.getParamOrEmpty(request, PARAM_ID);
 
+        logger.info("ID to delete: " + idString);
         FeaturedFilm feature = null;
         boolean success = false;
         if (IsIntegerV.P.apply(idString)) {
@@ -60,6 +61,7 @@ public class FeaturedFilmDeleteServlet extends HttpServlet {
         }
 
         String message;
+        logger.info("Film to delete: " + feature);
         if (feature == null) {
             message = String.format(FAIL_MSG_FMT, idString);
             logger.warning(String.format(FAIL_LOG_FMT, idString));

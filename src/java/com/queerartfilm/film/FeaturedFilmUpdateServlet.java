@@ -61,9 +61,7 @@ public class FeaturedFilmUpdateServlet extends HttpServlet {
             feature = new FeaturedFilm();
         }
         // Add constant values as attributes to facilitate EL access
-        request.setAttribute("monthList", MONTHS);
-        request.setAttribute("ratingsList", RATINGS);
-        request.setAttribute("venueList", VENUES);
+        setValueLists(request);
         request.setAttribute(ATTRIBUTE_FILM, feature);
         request.getRequestDispatcher(VIEW).forward(request, response);
     }
@@ -84,6 +82,13 @@ public class FeaturedFilmUpdateServlet extends HttpServlet {
 
 
         // Postback.
+        setValueLists(request);
         request.getRequestDispatcher(VIEW).forward(request, response);
+    }
+
+    private void setValueLists(HttpServletRequest request) {
+        request.setAttribute("monthList", MONTHS);
+        request.setAttribute("ratingsList", RATINGS);
+        request.setAttribute("venueList", VENUES);
     }
 }

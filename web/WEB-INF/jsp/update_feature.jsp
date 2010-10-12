@@ -269,7 +269,7 @@
         </div>
       </form>
 
-      <form method="post" action="/manage/features/delete?id=${qafSeries.id}" >
+      <form method="post" action="/manage/features/delete?id=${feature.id}" >
         <div class="inputbox" id="delete">
           <c:if test="${!(form.valid || param.id eq 'new' || empty param.id)}">
             <input type="submit" value="Delete" class="submit delete" />
