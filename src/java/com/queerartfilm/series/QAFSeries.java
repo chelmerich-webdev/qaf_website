@@ -22,9 +22,8 @@ import javax.persistence.Id;
 @Cached
 public class QAFSeries implements Serializable, Comparable<QAFSeries> {
 
-    private 
     @Id
-    Long id;
+    private Long id;
     private String title;
     private SortedSet<Key<FeaturedFilm>> filmKeys;
 

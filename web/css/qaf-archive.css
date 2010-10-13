@@ -11,7 +11,7 @@ ul#archive-list {
   margin-top: 20px;
   margin-left: 0px;
   padding-right: 10px;
-  width: 728px;
+  width: 736px;/* 728 + 8 extra to accomodate zoom out*/
 }
 
 li.archive-row {
