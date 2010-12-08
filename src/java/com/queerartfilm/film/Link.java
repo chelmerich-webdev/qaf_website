@@ -1,5 +1,7 @@
 package com.queerartfilm.film;
 
+import com.google.appengine.repackaged.org.json.JSONObject;
+import com.google.appengine.repackaged.org.json.JSONString;
 import java.util.regex.Pattern;
 
 /**
@@ -8,7 +10,7 @@ import java.util.regex.Pattern;
  * @author Curt Helmerich
  * @author ch67dev@gmail.com
  */
-public class Link {
+public class Link implements JSONString {
     private static final String YOU_TUBE_ID_REGEX = "[a-zA-Z0-9_-]{11}";
     private String label;
     private String url;
@@ -40,5 +42,20 @@ public class Link {
     public boolean isYouTubeId() {
         return Pattern.matches(YOU_TUBE_ID_REGEX, this.url);
     }
-    
+
+    @Override
+    public String toJSONString() {
+        String result = null;
+        JSONObject json = new JSONObject();
+        try {
+            json.put("label", this.getLabel());
+            json.put("url", this.getUrl());
+            json.put("youTubeId", this.isYouTubeId());
+            result = json.toString();
+        } catch (Exception e) {
+        }
+        return result;
+    }
+
+
 }

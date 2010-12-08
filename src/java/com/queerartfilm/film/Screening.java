@@ -1,5 +1,7 @@
 package com.queerartfilm.film;
 
+import com.google.appengine.repackaged.org.json.JSONObject;
+import com.google.appengine.repackaged.org.json.JSONString;
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -14,7 +16,7 @@ import java.util.logging.Logger;
  * @author Curt Helmerich
  * @author ch67dev@gmail.com
  */
-public class Screening implements Serializable, Comparable<Screening> {
+public class Screening implements Serializable, Comparable<Screening>, JSONString {
 
     private static Logger logger = Logger.getLogger(Screening.class.getName());
     // default format = date LONG time SHORT = MMMM d, yyyy h:mm a
@@ -50,8 +52,6 @@ public class Screening implements Serializable, Comparable<Screening> {
         }
         return DateFormat.getTimeInstance(DateFormat.SHORT).format(date);
     }
-
-    
 
     public static String getYear(Date date) {
         if (date == null) {
@@ -130,7 +130,6 @@ public class Screening implements Serializable, Comparable<Screening> {
         this.purchaseUrl = purchaseUrl;
     }
 
-
     public String getSecondTime() {
         return secondTime;
     }
@@ -150,14 +149,14 @@ public class Screening implements Serializable, Comparable<Screening> {
         }
         return onSale;
     }
-    
+
     /**
      * This package-private setter sets a derived value so takes no parameters.
      */
     void setOnSale() {
         boolean noScreeningDate = this.date == null;
         boolean noPurchaseUrl = this.purchaseUrl == null || "".equals(this.purchaseUrl);
-        
+
         if (noScreeningDate || noPurchaseUrl || isPast()) {
             this.onSale = false;
         } else {
@@ -181,7 +180,7 @@ public class Screening implements Serializable, Comparable<Screening> {
             past = false;
             return;
         }
-        
+
         Date today = getDateOnly(new Date());
         Date showdate = getDateOnly(this.date);
         this.past = today.after(showdate);
@@ -235,5 +234,28 @@ public class Screening implements Serializable, Comparable<Screening> {
         hash = 97 * hash + (this.date != null ? this.date.hashCode() : 0);
         hash = 97 * hash + (this.venue != null ? this.venue.hashCode() : 0);
         return hash;
+    }
+
+    @Override
+    public String toJSONString() {
+        String result = null;
+        JSONObject json = new JSONObject();
+        try {
+            json.put("date", this.getDate().getTime());
+            json.put("venue", this.getVenue());
+            json.put("purchaseUrl", this.getPurchaseUrl());
+            json.put("onSale", this.isOnSale());
+            
+
+
+            result = json.toString(2);
+        } catch (Exception e) {
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Screening s = new Screening();
+        System.out.println(s.toJSONString());
     }
 }

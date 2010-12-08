@@ -1,12 +1,16 @@
 package com.queerartfilm.film;
 
+import com.google.appengine.repackaged.org.json.JSONObject;
+import com.google.appengine.repackaged.org.json.JSONString;
+
+
 /**
  * Models MPAA film rating system
  * 
  * @author Curt Helmerich
  * @author ch67dev@gmail.com
  */
-public enum Rating {
+public enum Rating implements JSONString {
 
     NR, 
     G,
@@ -22,5 +26,17 @@ public enum Rating {
 
     public String getName() {
         return name();
+    }
+
+    @Override
+    public String toJSONString() {
+        String result = null;
+        JSONObject json = new JSONObject();
+        try {
+            json.put("name", this. name());
+            result = json.toString();
+        } catch (Exception e) {
+        }
+        return result;
     }
 }

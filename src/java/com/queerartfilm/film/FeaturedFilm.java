@@ -13,6 +13,8 @@ import java.util.logging.Logger;
 import javax.persistence.Embedded;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import org.json.JSONObject;
+import org.json.JSONString;
 
 /**
  * Java Bean transfer object for a featured film.
@@ -22,7 +24,7 @@ import javax.persistence.PrePersist;
  */
 @Cached
 @Unindexed
-public class FeaturedFilm implements Serializable, Comparable<FeaturedFilm> {
+public class FeaturedFilm implements Serializable, Comparable<FeaturedFilm>, JSONString {
 
     private static final Logger logger = Logger.getLogger(FeaturedFilm.class.getName());
     @Id
@@ -218,5 +220,22 @@ public class FeaturedFilm implements Serializable, Comparable<FeaturedFilm> {
     @Override
     public int compareTo(FeaturedFilm that) {
         return this.screening.compareTo(that.screening);
+    }
+
+    @Override
+    public String toJSONString() {
+        String result = null;
+        JSONObject json = new JSONObject();
+        try {
+            json.put("title", this.getTitle());
+            json.put("director", this.getDirector());
+            json.put("releaseYear", this.getReleaseYear());
+            json.put("presenter", this.getPresenter());
+            json.put("synopsis", this.getSynopsis());
+            json.put("screening", this.getScreening());
+            result.toString();
+        } catch (Exception e) {
+        }
+        return result;
     }
 }

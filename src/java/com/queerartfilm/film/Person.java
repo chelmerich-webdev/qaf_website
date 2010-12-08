@@ -1,6 +1,11 @@
 package com.queerartfilm.film;
 
+import com.google.appengine.repackaged.org.json.JSONException;
+import com.google.appengine.repackaged.org.json.JSONObject;
+import com.google.appengine.repackaged.org.json.JSONString;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Java Bean transfer object for a person
@@ -8,7 +13,7 @@ import java.io.Serializable;
  * @author Curt Helmerich
  * @author ch67dev@gmail.com
  */
-public class Person implements Serializable {
+public class Person implements Serializable, JSONString {
 
     private String first;
     private String last;
@@ -73,6 +78,17 @@ public class Person implements Serializable {
         return hash;
     }
 
-
+    @Override
+    public String toJSONString() {
+        JSONObject json = new JSONObject();
+        String result = null;
+        try {
+            json.put("first", this.getFirst());
+            json.put("last", this.getLast());
+            result = json.toString();
+        } catch (JSONException ex) { }
+        
+        return result;
+    }
 
 }
