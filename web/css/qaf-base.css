@@ -177,18 +177,33 @@ a:active, .rollover a:active {
   font-weight: bold;
 }
 
-/*
-#mailing {
-  margin-right: 10px;
-  border-right: 2px solid #ccc;
-  padding-right: 10px;
-  display: inline;
+/* Mail Chimp footer form */
+#mc_embed_signup {
+  background:#fff;
+  clear:left;
 }
-
-#mailing input {
-  width: 150px;
-  margin: 0px 2px;
-  font: normal 125%/100% courier, monospaced;
-
+#mc_embed_signup form {
+  margin-top: 0;
+  font-size: 80%;
 }
-*/
+#mc_embed_signup label {
+  padding-right: 5px;
+  font-weight: normal;
+  text-align: left;
+  width: auto;
+  vertical-align: top;
+}
+#mc_embed_signup input {
+  margin-top: -4px;
+  padding: 0 5px;
+  border: 1px solid #999999;
+  width: 200px;
+  height: 20px;
+  vertical-align: top;
+}
+#mc_embed_signup .submit.button {
+  width: 90px;
+  height: 22px;
+  background: #ccc;
+  color:#333;
+}
