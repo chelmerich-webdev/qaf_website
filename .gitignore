@@ -4,7 +4,7 @@
 build.xml
 build/
 dist/
-nbproject/private/
+nbproject/
 src/java/com/queerartfilm/deprecated
 src/java/com/queerartfilm/dao/deprecated
 src/java/com/queerartfilm/film/deprecated
