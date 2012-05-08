@@ -8,6 +8,7 @@ nbproject/ant-deploy.xml
 nbproject/build-impl.xml
 nbproject/genfiles.properties
 nbproject/project.properties
+nbproject/private/
 src/java/com/queerartfilm/deprecated
 src/java/com/queerartfilm/dao/deprecated
 src/java/com/queerartfilm/film/deprecated
