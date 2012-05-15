@@ -26,7 +26,18 @@
               </c:if>
 
               <c:if test="${ff.seriesKey != null}">
-                <li class="archive-item"><qaf:archive-feature-item feature="${ff}" /></li>
+                <c:set var="urlKey" value="${ff.urlKey}" />
+                <c:set var="firstChar" value="${fn:substring(urlKey, 0, 1)}" />
+                <c:choose>
+                    <c:when test="${qaf:isInteger(firstChar)}">
+                        <c:set var="classKey" value="d${urlKey}" />
+                    </c:when>
+                    <c:otherwise>
+                        <c:set var="classKey" value="${urlKey}" />
+                    </c:otherwise>
+                </c:choose>
+                
+                <li class="archive-item ${classKey}"><qaf:archive-feature-item feature="${ff}" /></li>
               </c:if>
 
               <c:if test="${status.count % 4 eq 0 || status.count eq totalCount}" >
