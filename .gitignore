@@ -1,5 +1,6 @@
 # Ignore these files
 
+*.patch
 *.DS_Store
 build.xml
 build/
