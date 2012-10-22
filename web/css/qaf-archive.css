@@ -171,6 +171,18 @@ div#buy-tickets p {
     display: block;
 }
 
+.annie .film-still {
+    background: url(/images/qaf-archive-sprite.png) 0 -946px no-repeat;
+}
+.norman-is-that-you .film-still {
+    background: url(/images/qaf-archive-sprite.png) -180px -946px no-repeat;
+}
+.ashik-kerib .film-still {
+    background: url(/images/qaf-archive-sprite.png) -360px -946px no-repeat;
+}
+.jules-and-jim .film-still {
+    background: url(/images/qaf-archive-sprite.png) -540px -946px no-repeat;
+}
 .rope .film-still {
     background: url(/images/qaf-archive-sprite.png) 0 -860px no-repeat;
 }
