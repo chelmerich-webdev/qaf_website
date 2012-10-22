@@ -1,11 +1,10 @@
 package com.queerartfilm.film;
 
-import com.google.appengine.repackaged.org.json.JSONException;
-import com.google.appengine.repackaged.org.json.JSONObject;
-import com.google.appengine.repackaged.org.json.JSONString;
+
 import java.io.Serializable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONString;
 
 /**
  * Java Bean transfer object for a person

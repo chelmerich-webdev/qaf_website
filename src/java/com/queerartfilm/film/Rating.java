@@ -1,7 +1,7 @@
 package com.queerartfilm.film;
 
-import com.google.appengine.repackaged.org.json.JSONObject;
-import com.google.appengine.repackaged.org.json.JSONString;
+import org.json.JSONObject;
+import org.json.JSONString;
 
 
 /**

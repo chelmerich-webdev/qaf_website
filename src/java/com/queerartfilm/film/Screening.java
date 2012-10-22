@@ -1,7 +1,5 @@
 package com.queerartfilm.film;
 
-import com.google.appengine.repackaged.org.json.JSONObject;
-import com.google.appengine.repackaged.org.json.JSONString;
 import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -9,6 +7,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.logging.Logger;
+import org.json.JSONObject;
+import org.json.JSONString;
 
 /**
  *  Embedded Java Bean transfer object for a QAF screening date/time and location.
@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class Screening implements Serializable, Comparable<Screening>, JSONString {
 
-    private static Logger logger = Logger.getLogger(Screening.class.getName());
+    private static final Logger logger = Logger.getLogger(Screening.class.getName());
     // default format = date LONG time SHORT = MMMM d, yyyy h:mm a
     public static String defaultStringFormat = ("%s %s, %s %s:%s %s");
     public static DateFormat df = DateFormat.getDateTimeInstance(
