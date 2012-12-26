@@ -175,6 +175,15 @@ div#buy-tickets p {
     background-image: url(/images/qaf-archive-sprite.jpg);
     background-repeat: no-repeat;
 }
+.set-it-off .film-still {
+    background-position: -360px -1032px
+}
+.brother-from-another-planet .film-still {
+    background-position: -180px -1032px
+}
+.three-on-a-match-and-bubbles .film-still {
+    background-position: 0 -1032px
+}
 .annie .film-still {
     background-position: 0 -946px
 }
