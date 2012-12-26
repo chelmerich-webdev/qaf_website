@@ -6,9 +6,9 @@ build.xml
 build/
 dist/
 nbproject/ant-deploy.xml
-nbproject/build-impl.xml
-nbproject/genfiles.properties
-nbproject/project.properties
+*/build-impl.xml
+*/genfiles.properties
+*/project.properties
 nbproject/private/
 src/java/com/queerartfilm/deprecated
 src/java/com/queerartfilm/dao/deprecated
