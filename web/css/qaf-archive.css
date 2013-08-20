@@ -175,6 +175,18 @@ div#buy-tickets p {
     background-image: url(/images/qaf-archive-sprite.jpg);
     background-repeat: no-repeat;
 }
+.over-the-edge .film-still {
+    background-position: -540px -1118px
+}
+.dancer-in-the-dark .film-still {
+    background-position: -360px -1204px;
+}
+.victim .film-still {
+    background-position: -180px -1204px;
+}
+.law-of-desire .film-still {
+    background-position: 0 -1204px;
+}
 .ms-45 .film-still {
     background-position: 0 -1118px
 }
