@@ -175,6 +175,18 @@ div#buy-tickets p {
     background-image: url(/images/qaf-archive-sprite.jpg);
     background-repeat: no-repeat;
 }
+.i-shot-andy-warhol .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) 0 0 no-repeat;
+}
+.aggressives .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -180px 0 no-repeat;
+}
+.song-sung-blue .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -360px 0 no-repeat;
+}
+.rebecca .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -540px 0 no-repeat;
+}
 .set-it-off .film-still {
     background-position: -360px -1032px
 }
