@@ -265,109 +265,111 @@ div#buy-tickets p {
 }
 /* 2011 */
 .servant .film-still {
-    background-position: 0 -688px;
+    background: url(/images/qaf-2011-sprite.jpg) 0 0 no-repeat;
 }
 .pay-it-no-mind-marsha-p-johnson .film-still {
-    background-position: -180px -688px;
+    background: url(/images/qaf-2011-sprite.jpg) -180px 0 no-repeat;
 }
 .desperately-seeking-susan .film-still {
-    background-position: -360px -688px;
+    background: url(/images/qaf-2011-sprite.jpg) -360px 0 no-repeat;
 }
 .saturday-night-and-sunday-morning .film-still {
-    background-position: -540px -688px;
+    background: url(/images/qaf-2011-sprite.jpg) -540px 0 no-repeat;
 }
 .bitter-tears-of-petra-von-kant .film-still {
-    background-position: 0 -602px;
+    background: url(/images/qaf-2011-sprite.jpg) 0 -86px no-repeat;
 }
 .all-that-jazz .film-still {
-    background-position: -180px -602px;
+    background: url(/images/qaf-2011-sprite.jpg) -180px -86px no-repeat;
 }
 .paris-is-burning .film-still {
-    background-position: -360px -602px;
+    background: url(/images/qaf-2011-sprite.jpg) -360px -86px no-repeat;
 }
 .johanna-darc-of-mongolia .film-still {
-    background-position: -540px -602px;
+    background: url(/images/qaf-2011-sprite.jpg) -540px -86px no-repeat;
 }
 .desert-hearts .film-still {
-    background-position: 0 -516px;
+    background: url(/images/qaf-2011-sprite.jpg) 0 -172px no-repeat;
 }
 .pink-narcissus .film-still {
-    background-position: -180px -516px;
+    background: url(/images/qaf-2011-sprite.jpg) -180px -172px no-repeat;
 }
 .alices-restaurant .film-still {
-    background-position: -360px -516px;
+    background: url(/images/qaf-2011-sprite.jpg) -360px -172px no-repeat;
 }
 .outsiders-directors-cut .film-still {
-    background-position: -540px -516px;
+    background: url(/images/qaf-2011-sprite.jpg) -540px -172px no-repeat;
 }
+
+/* 2010 */
 .one-sings-the-other-doesnt .film-still {
-    background-position: 0 -430px;
+    background: url(/images/qaf-2010-sprite.jpg) 0 0 no-repeat;
 }
 .if .film-still {
-    background-position: -180px -430px;
+    background: url(/images/qaf-2010-sprite.jpg) -180px 0 no-repeat;
 }
 .thief-of-bagdad .film-still {
-    background-position: -360px -430px;
+    background: url(/images/qaf-2010-sprite.jpg) -360px 0 no-repeat;
 }
 .films-of-act-up .film-still {
-    background-position: -540px -430px;
+    background: url(/images/qaf-2010-sprite.jpg) -540px 0 no-repeat;
 }
 .funeral-parade-of-roses .film-still {
-    background-position: 0 -344px;
+    background: url(/images/qaf-2010-sprite.jpg) 0 -86px no-repeat;
 }
 .faster-pussycat-kill-kill .film-still {
-    background-position: -180px -344px;
+    background: url(/images/qaf-2010-sprite.jpg) -180px -86px no-repeat;
 }
 .mademoiselle .film-still {
-    background-position: -360px -344px;
+    background: url(/images/qaf-2010-sprite.jpg) -360px -86px no-repeat;
 }
 .times-square .film-still {
-    background-position: -540px -344px;
+    background: url(/images/qaf-2010-sprite.jpg) -540px -86px no-repeat;
 }
-
 .born-in-flames .film-still {
-    background-position: 0 -258px;
+    background: url(/images/qaf-2010-sprite.jpg) 0 -172px no-repeat;
 }
 .portrait-of-jason .film-still {
-    background-position: -180px -258px;
+    background: url(/images/qaf-2010-sprite.jpg) -180px -172px no-repeat;
 }
 .lost-films-of-charles-ludlam .film-still {
-    background-position: -360px -258px;
+    background: url(/images/qaf-2010-sprite.jpg) -360px -172px no-repeat;
 }
 .devils .film-still {
-    background-position: -540px -258px;
+    background: url(/images/qaf-2010-sprite.jpg) -540px -172px no-repeat;
 }
 
+/* 2009 */
 .group .film-still {
-    background-position: 0 -172px;
+    background: url(/images/qaf-2009-sprite.jpg) 0 0 no-repeat;
 }
 .tropical-malady .film-still {
-    background-position: -180px -172px;
+    background: url(/images/qaf-2009-sprite.jpg) -180px 0 no-repeat;
 }
 .entertaining-mr-sloane .film-still {
-    background-position: -360px -172px;
+    background: url(/images/qaf-2009-sprite.jpg) -360px 0 no-repeat;
 }
 .so-evil-my-love .film-still {
-    background-position: -540px -172px;
+    background: url(/images/qaf-2009-sprite.jpg) -540px 0 no-repeat;
 }
 .je-tu-il-elle .film-still {
-    background-position: 0 -86px;
+    background: url(/images/qaf-2009-sprite.jpg) 0 -86px no-repeat;
 }
 .tongues-untied .film-still {
-    background-position: -180px -86px;
+    background: url(/images/qaf-2009-sprite.jpg) -180px -86px no-repeat;
 }
 .tree-grows-in-brooklyn .film-still {
-    background-position: -360px -86px;
+    background: url(/images/qaf-2009-sprite.jpg) -360px -86px no-repeat;
 }
 .queer-unavailable .film-still {
-    background-position: -540px -86px;
+    background: url(/images/qaf-2009-sprite.jpg) -540px -86px no-repeat;
 }
 .d8-12 .film-still {
-    background-position: 0 0;
+    background: url(/images/qaf-2009-sprite.jpg) 0 -172px no-repeat;
 }
 .blue .film-still {
-    background-position: -180px 0;
+    background: url(/images/qaf-2009-sprite.jpg) -180px -172px no-repeat;
 }
 .blood-of-a-poet .film-still {
-    background-position: -360px 0;
+    background: url(/images/qaf-2009-sprite.jpg) -360px -172px no-repeat;
 }
