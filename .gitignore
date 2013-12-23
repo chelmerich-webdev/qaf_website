@@ -7,6 +7,7 @@ build/
 dist/
 nbproject/*.xml
 nbproject/*.properties
+nbproject/
 nbproject/ant-deploy.xml
 */build-impl.xml
 */genfiles.properties
