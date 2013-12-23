@@ -187,6 +187,30 @@ div#buy-tickets p {
 .rebecca .film-still {
     background: url(/images/qaf-2014-sprite.jpg) -540px 0 no-repeat;
 }
+.over-the-edge .film-still {
+    background-position: 0 -1204px
+}
+.dancer-in-the-dark .film-still {
+    background-position: -180px -1204px;
+}
+.victim .film-still {
+    background-position: -360px -1204px;
+}
+.law-of-desire .film-still {
+    background-position: -540px -1204px;
+}
+.ms-45 .film-still {
+    background-position: 0 -1118px
+}
+.performance .film-still {
+    background-position: -180px -1118px;
+}
+.harold-and-maude .film-still {
+    background-position: -360px -1118px;
+}
+.my-beautiful-laundrette .film-still {
+    background-position: -540px -1118px;
+}
 .set-it-off .film-still {
     background-position: -360px -1032px
 }
