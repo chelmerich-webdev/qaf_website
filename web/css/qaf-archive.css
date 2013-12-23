@@ -176,6 +176,7 @@ div#buy-tickets p {
     background-repeat: no-repeat;
 }
 
+/* 2014 */
 .i-shot-andy-warhol .film-still {
     background: url(/images/qaf-2014-sprite.jpg) 0 0 no-repeat;
 }
@@ -189,75 +190,80 @@ div#buy-tickets p {
     background: url(/images/qaf-2014-sprite.jpg) -540px 0 no-repeat;
 }
 
-.over-the-edge .film-still {
-    background-position: 0 -1204px
-}
-.dancer-in-the-dark .film-still {
-    background-position: -180px -1204px;
+/* 2013 */
+.law-of-desire .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) 0 0 no-repeat;
 }
 .victim .film-still {
-    background-position: -360px -1204px;
+    background: url(/images/qaf-2013-sprite.jpg) -180px 0 no-repeat;
 }
-.law-of-desire .film-still {
-    background-position: -540px -1204px;
+.dancer-in-the-dark .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -360px 0 no-repeat;
 }
-.ms-45 .film-still {
-    background-position: 0 -1118px
-}
-.performance .film-still {
-    background-position: -180px -1118px;
-}
-.harold-and-maude .film-still {
-    background-position: -360px -1118px;
+.over-the-edge .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -540px 0 no-repeat;
 }
 .my-beautiful-laundrette .film-still {
-    background-position: -540px -1118px;
+    background: url(/images/qaf-2013-sprite.jpg) 0 -86px no-repeat;
+}
+.harold-and-maude .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -180px -86px no-repeat;
+}
+.performance .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -360px -86px no-repeat;
+}
+.ms-45 .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -540px -86px no-repeat;
 }
 .set-it-off .film-still {
-    background-position: -360px -1032px
+    background: url(/images/qaf-2013-sprite.jpg) 0 -172px no-repeat;
+}
+/* resheduled */
+.ashik-kerib .film-still {
+    background: url(/images/qaf-2013-sprite.jpg) -180px -172px no-repeat;
 }
 .brother-from-another-planet .film-still {
-    background-position: -180px -1032px
+    background: url(/images/qaf-2013-sprite.jpg) -360px -172px no-repeat;
 }
 .three-on-a-match-and-bubbles .film-still {
-    background-position: 0 -1032px
+    background: url(/images/qaf-2013-sprite.jpg) -540px -172px no-repeat;
 }
+
+/* 2012 */
 .annie .film-still {
-    background-position: 0 -946px
+    background: url(/images/qaf-2012-sprite.jpg) 0 0 no-repeat;
 }
 .norman-is-that-you .film-still {
-    background-position: -180px -946px;
-}
-.ashik-kerib .film-still {
-    background-position: -360px -946px;
+    background: url(/images/qaf-2012-sprite.jpg) -180px 0 no-repeat;
 }
 .jules-and-jim .film-still {
-    background-position: -540px -946px;
+    background: url(/images/qaf-2012-sprite.jpg) -360px 0 no-repeat;
 }
 .rope .film-still {
-    background-position: 0 -860px;
+    background: url(/images/qaf-2012-sprite.jpg) 0 -86px no-repeat;
 }
 .i-could-go-on-singing .film-still {
-    background-position: -180px -860px;
+    background: url(/images/qaf-2012-sprite.jpg) -180px -86px no-repeat;
 }
 .salo-or-the-120-days-of-sodom .film-still {
-    background-position: -360px -860px;
+    background: url(/images/qaf-2012-sprite.jpg) -360px -86px no-repeat;
 }
 .thundercrack .film-still {
-    background-position: -540px -860px;
+    background: url(/images/qaf-2012-sprite.jpg) -540px -86px no-repeat;
 }
 .killing-of-sister-george .film-still {
-    background-position: 0 -774px;
+    background: url(/images/qaf-2012-sprite.jpg) 0 -172px no-repeat;
 }
 .postcards-from-america .film-still {
-    background-position: -180px -774px;
+    background: url(/images/qaf-2012-sprite.jpg) -180px -172px no-repeat;
 }
 .runaway-train .film-still {
-    background-position: -360px -774px;
+    background: url(/images/qaf-2012-sprite.jpg) -360px -172px no-repeat;
 }
 .come-back-to-the-five-and-dime-jimmy-dean-jimmy-dean .film-still {
-    background-position: -540px -774px;
+    background: url(/images/qaf-2012-sprite.jpg) -540px -172px no-repeat;
 }
+/* 2011 */
 .servant .film-still {
     background-position: 0 -688px;
 }
