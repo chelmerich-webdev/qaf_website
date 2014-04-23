@@ -177,6 +177,18 @@ div#buy-tickets p {
 }
 
 /* 2014 */
+.queen .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) 0 -86px no-repeat;
+}
+.hedwig-and-the-angry-inch .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -180px -86px no-repeat;
+}
+.suddenly-last-summer .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -360px -86px no-repeat;
+}
+.outrageous .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -540px -86px no-repeat;
+}
 .i-shot-andy-warhol .film-still {
     background: url(/images/qaf-2014-sprite.jpg) 0 0 no-repeat;
 }
