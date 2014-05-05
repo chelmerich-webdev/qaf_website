@@ -5,7 +5,7 @@
 <div id="footer1" >
   <!-- Begin MailChimp Signup Form -->
   <div id="mc_embed_signup" class="left">
-  <form action="http://queerartfilm.us2.list-manage1.com/subscribe/post?u=c860069378afdd2978d546b65&amp;id=e08f631633" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+  <form action="http://queerartfilm.us2.list-manage1.com/subscribe/post?u=c860069378afdd2978d546b65&id=3843494149" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
         <label for="mce-EMAIL">Subscribe to our mailing list</label>
         <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="submit button">
