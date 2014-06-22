@@ -19,9 +19,9 @@ public class Config {
     @Id
     String id;
     private Key<QAFSeries> qafSeriesKey;
-//    private Key<Series> series;
-//    private Key<Event> event;
+    private Key<QAFSeries> qafSeriesBKey;
     private Key<FeaturedFilm> featuredFilmKey;
+    private Key<FeaturedFilm> featuredFilmBKey;
     private String year;
     private String facebookUrl;
     private String subscribeEmailAddress;
@@ -40,12 +40,28 @@ public class Config {
         this.featuredFilmKey = featuredFilmKey;
     }
 
+    public Key<FeaturedFilm> getFeaturedFilmBKey() {
+        return featuredFilmBKey;
+    }
+
+    public void setFeaturedFilmBKey(Key<FeaturedFilm> featuredFilmBKey) {
+        this.featuredFilmBKey = featuredFilmBKey;
+    }
+
     public Key<QAFSeries> getQafSeriesKey() {
         return qafSeriesKey;
     }
 
     public void setQafSeriesKey(Key<QAFSeries> qafSeriesKey) {
         this.qafSeriesKey = qafSeriesKey;
+    }
+
+    public Key<QAFSeries> getQafSeriesBKey() {
+        return qafSeriesKey;
+    }
+
+    public void setQafSeriesBKey(Key<QAFSeries> qafSeriesBKey) {
+        this.qafSeriesKey = qafSeriesBKey;
     }
 
     public String getYear() {
@@ -95,6 +111,6 @@ public class Config {
     @Override
     public String toString() {
         return String.format(
-                "[QafSeriesId=%s, featureId=%s]", qafSeriesKey, featuredFilmKey);
+                "[QafSeriesId=%s, featureId=%s]", qafSeriesKey, featuredFilmKey, qafSeriesBKey, featuredFilmBKey);
     }
 }

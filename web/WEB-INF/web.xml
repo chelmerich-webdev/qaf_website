@@ -154,8 +154,12 @@
         <servlet-class>com.queerartfilm.web.ConfigUpdateServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Display Featured Films on Homepage</servlet-name>
-        <servlet-class>com.queerartfilm.film.FeaturedFilmHomeServlet</servlet-class>
+        <servlet-name>Display Series A Featured Film on Homepage</servlet-name>
+        <servlet-class>com.queerartfilm.film.SeriesAFeaturedFilmHomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Display Series B Featured Film on Homepage</servlet-name>
+        <servlet-class>com.queerartfilm.film.SeriesBFeaturedFilmHomeServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Update Feature</servlet-name>
@@ -230,11 +234,14 @@
         <url-pattern>/manage</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Display Featured Films on Homepage</servlet-name>
+        <servlet-name>Display Series A Featured Film on Homepage</servlet-name>
         <url-pattern>/current/*</url-pattern>
         <url-pattern>/qafnyc/*</url-pattern>
-        <url-pattern>/qafla/*</url-pattern>
         <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display Series B Featured Film on Homepage</servlet-name>
+        <url-pattern>/qafla/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

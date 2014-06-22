@@ -60,7 +60,9 @@ public class ListInitializerListener implements ServletContextListener {
             logger.info("Config DB is empty");
             Config newConfig = new Config();
             newConfig.setFeaturedFilmKey(featureKey);
+            newConfig.setFeaturedFilmBKey(featureKey);
             newConfig.setQafSeriesKey(qafSeriesKey);
+            newConfig.setQafSeriesBKey(qafSeriesKey);
             newConfig.setYear(year);
 
             configDAO.save(newConfig);
