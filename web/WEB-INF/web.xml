@@ -65,15 +65,15 @@
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.home</param-name>
-        <param-value>home,/current</param-value>
+        <param-value>qaf nyc,/current</param-value>
     </context-param>
     <context-param>
-        <param-name>com.queerartfilm.menu.series-a</param-name>
-        <param-value>series-a,/current</param-value>
+        <param-name>com.queerartfilm.menu.qaf-nyc</param-name>
+        <param-value>qaf nyc,/current</param-value>
     </context-param>
     <context-param>
-        <param-name>com.queerartfilm.menu.series-b</param-name>
-        <param-value>series-b,/current</param-value>
+        <param-name>com.queerartfilm.menu.qaf-la</param-name>
+        <param-value>qaf la,/current</param-value>
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.about</param-name>
@@ -93,7 +93,7 @@
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.keys</param-name>
-        <param-value>home,about,archive,press,contact,series-a,series-b</param-value>
+        <param-value>home,qaf-la,about,archive,press,contact</param-value>
     </context-param>
     <filter>
         <description>Trims extra whitespace for a tidy source presentation.</description>
@@ -232,8 +232,8 @@
     <servlet-mapping>
         <servlet-name>Display Featured Films on Homepage</servlet-name>
         <url-pattern>/current/*</url-pattern>
-        <url-pattern>/series-a/*</url-pattern>
-        <url-pattern>/series-b/*</url-pattern>
+        <url-pattern>/qafnyc/*</url-pattern>
+        <url-pattern>/qafla/*</url-pattern>
         <url-pattern>/index.html</url-pattern>
     </servlet-mapping>
     <session-config>
