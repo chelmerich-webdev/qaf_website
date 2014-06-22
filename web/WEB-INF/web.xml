@@ -65,15 +65,15 @@
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.home</param-name>
-        <param-value>qaf nyc,/current</param-value>
+        <param-value>qaf nyc,/qafnyc</param-value>
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.qaf-nyc</param-name>
-        <param-value>qaf nyc,/current</param-value>
+        <param-value>qaf nyc,/qafnyc</param-value>
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.qaf-la</param-name>
-        <param-value>qaf la,/current</param-value>
+        <param-value>qaf la,/qafla</param-value>
     </context-param>
     <context-param>
         <param-name>com.queerartfilm.menu.about</param-name>
