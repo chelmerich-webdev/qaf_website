@@ -177,6 +177,18 @@ div#buy-tickets p {
 }
 
 /* 2014 */
+.young-and-wild .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) 0 -172px no-repeat;
+}
+.in-celebration-all-over-me-alex-sichel .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -180px -172px no-repeat;
+}
+.liquid-sky .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -360px -172px no-repeat;
+}
+.west-side-story .film-still {
+    background: url(/images/qaf-2014-sprite.jpg) -540px -172px no-repeat;
+}
 .queen .film-still {
     background: url(/images/qaf-2014-sprite.jpg) 0 -86px no-repeat;
 }
