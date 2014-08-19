@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://kenai.com/projects/nbappengine/downloads/download/schema/appengine-web.xsd appengine-web.xsd">
     <application>qafwebsite</application>
-    <version>fall-2014-01</version> 
+    <version>fall-2014-02</version> 
     <static-files>
         <include expiration="6h" path="/images/*"/>
         <include path="*.css"/>

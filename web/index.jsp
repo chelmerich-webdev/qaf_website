@@ -30,8 +30,7 @@
     </div>
     <div id="featured-film">
       <div id="seriesbar">
-        <h3><a href="http://www.ifccenter.com/series/queerartfilm-summer-of-drag/">${series} <span id="at">@</span>
-          <img src="/images/ifc_center_logo_small.png" alt="IFC Center" /></a></h3>
+        <h3>${series} <span id="at">@</span><img src="/images/ifc_center_logo_small.png" alt="IFC Center" /></h3>
       </div>
       <div id="feature-image">
           <qaf:film-link film="${selectedFilm.title}"
