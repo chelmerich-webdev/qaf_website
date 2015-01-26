@@ -176,6 +176,20 @@ div#buy-tickets p {
     background-repeat: no-repeat;
 }
 
+/* 2015 */
+
+.batman-returns .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) 0 0 no-repeat;
+}
+.litany-for-survival .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
+}
+.litany-for-survival-the-life-and-work-of-audre-lorde .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
+}
+.to-die-like-a-man .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -360px 0 no-repeat;
+}
 /* 2014 */
 .young-and-wild .film-still {
     background: url(/images/qaf-2014-sprite.jpg) 0 -172px no-repeat;
