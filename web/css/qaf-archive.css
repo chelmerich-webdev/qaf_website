@@ -190,6 +190,9 @@ div#buy-tickets p {
 .to-die-like-a-man .film-still {
     background: url(/images/qaf-2015-sprite.png) -360px 0 no-repeat;
 }
+.to-sleep-with-anger .film-still {
+    background: url(/images/qaf-2015-sprite.png) -540px 0 no-repeat;
+}
 /* 2014 */
 .young-and-wild .film-still {
     background: url(/images/qaf-2014-sprite.jpg) 0 -172px no-repeat;
