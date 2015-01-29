@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.homepage']}" />
     <link rel="stylesheet" type="text/css" href="${initParam['com.queerartfilm.css.archive']}" />
   </head>
-  <body>
+  <body id="${ff.urlKey}">
     <qaf:body-top-include />
     <div id="listing">
       <div id="listing-header">
