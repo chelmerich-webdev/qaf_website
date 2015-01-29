@@ -413,7 +413,7 @@ div#buy-tickets p {
 }
 
 /* feature page overrides */
-#litany-for-survival-the-life-and-work-of-audre-lorde .listing-header-text,
-#litany-for-survival-the-life-and-work-of-audre-lorde .listing-header-shadow {
+#litany-for-survival-the-life-and-work-of-audre-lorde #listing-header-text,
+#litany-for-survival-the-life-and-work-of-audre-lorde #listing-header-shadow {
     margin-right: 470px;
 }
