@@ -179,19 +179,19 @@ div#buy-tickets p {
 /* 2015 - sprite is currently a png, to-do: update to jpg*/
 
 .batman-returns .film-still {
-    background: url(/images/qaf-2015-sprite.png) 0 0 no-repeat;
+    background: url(/images/qaf-2015-sprite.jpg) 0 0 no-repeat;
 }
 .litany-for-survival .film-still {
-    background: url(/images/qaf-2015-sprite.png) -180px 0 no-repeat;
+    background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
 }
 .litany-for-survival-the-life-and-work-of-audre-lorde .film-still {
-    background: url(/images/qaf-2015-sprite.png) -180px 0 no-repeat;
+    background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
 }
 .to-die-like-a-man .film-still {
-    background: url(/images/qaf-2015-sprite.png) -360px 0 no-repeat;
+    background: url(/images/qaf-2015-sprite.jpg) -360px 0 no-repeat;
 }
 .to-sleep-with-anger .film-still {
-    background: url(/images/qaf-2015-sprite.png) -540px 0 no-repeat;
+    background: url(/images/qaf-2015-sprite.jpg) -540px 0 no-repeat;
 }
 /* 2014 */
 .young-and-wild .film-still {
