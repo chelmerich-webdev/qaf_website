@@ -181,9 +181,6 @@ div#buy-tickets p {
 .batman-returns .film-still {
     background: url(/images/qaf-2015-sprite.jpg) 0 0 no-repeat;
 }
-.litany-for-survival .film-still {
-    background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
-}
 .litany-for-survival-the-life-and-work-of-audre-lorde .film-still {
     background: url(/images/qaf-2015-sprite.jpg) -180px 0 no-repeat;
 }
@@ -413,4 +410,10 @@ div#buy-tickets p {
 }
 .blood-of-a-poet .film-still {
     background: url(/images/qaf-2009-sprite.jpg) -360px -172px no-repeat;
+}
+
+/* feature page overrides */
+.litany-for-survival-the-life-and-work-of-audre-lorde .listing-header-text,
+.litany-for-survival-the-life-and-work-of-audre-lorde .listing-header-shadow {
+    margin-right: 470px;
 }
