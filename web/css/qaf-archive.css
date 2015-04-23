@@ -178,6 +178,18 @@ div#buy-tickets p {
 
 /* 2015 - sprite is currently a png, to-do: update to jpg*/
 
+.friday .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) 0 -86px no-repeat;
+}
+.james-baldwin-the-price-of-the-ticket .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -180px -86px no-repeat;
+}
+.mahogany .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -360px -86px no-repeat;
+}
+.looking-for-langston-isaac-julien-shorts .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -540px -86px no-repeat;
+}
 .batman-returns .film-still {
     background: url(/images/qaf-2015-sprite.jpg) 0 0 no-repeat;
 }
