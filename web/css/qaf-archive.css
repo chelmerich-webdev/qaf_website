@@ -178,6 +178,19 @@ div#buy-tickets p {
 
 /* 2015 - sprite is currently a png, to-do: update to jpg*/
 
+.hushhush-sweet-charlotte .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) 0 -172px no-repeat;
+}
+.vagabond .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -180px -172px no-repeat;
+}
+.fame .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -360px -172px no-repeat;
+}
+.natural-born-killers-the-directors-cut .film-still {
+    background: url(/images/qaf-2015-sprite.jpg) -540px -172px no-repeat;
+}
+
 .friday .film-still {
     background: url(/images/qaf-2015-sprite.jpg) 0 -86px no-repeat;
 }
