@@ -176,8 +176,20 @@ div#buy-tickets p {
     background-repeat: no-repeat;
 }
 
-/* 2015 - sprite is currently a png, to-do: update to jpg*/
-
+/* 2016 */
+.pom-poko .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) 0 px no-repeat;
+}
+.sweetie .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -180px 0px no-repeat;
+}
+.shinjuku-boys .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -360px 0px no-repeat;
+}
+.slaves-of-new-york .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -540px -0px no-repeat;
+}
+/* 2015 */
 .hushhush-sweet-charlotte .film-still {
     background: url(/images/qaf-2015-sprite.jpg) 0 -172px no-repeat;
 }
