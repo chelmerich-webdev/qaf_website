@@ -178,16 +178,16 @@ div#buy-tickets p {
 
 /* 2016 */
 .pom-poko .film-still {
-    background: url(/images/qaf-2016-sprite.jpg) 0 px no-repeat;
+    background: url(/images/qaf-2016-sprite.jpg) 0 0 no-repeat;
 }
 .sweetie .film-still {
-    background: url(/images/qaf-2016-sprite.jpg) -180px 0px no-repeat;
+    background: url(/images/qaf-2016-sprite.jpg) -180px 0 no-repeat;
 }
 .shinjuku-boys .film-still {
-    background: url(/images/qaf-2016-sprite.jpg) -360px 0px no-repeat;
+    background: url(/images/qaf-2016-sprite.jpg) -360px 0 no-repeat;
 }
 .slaves-of-new-york .film-still {
-    background: url(/images/qaf-2016-sprite.jpg) -540px -0px no-repeat;
+    background: url(/images/qaf-2016-sprite.jpg) -540px 0 no-repeat;
 }
 /* 2015 */
 .hushhush-sweet-charlotte .film-still {
