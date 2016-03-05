@@ -11,25 +11,12 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${libs.GoogleCollections.classpath}</file>
-                </library>
-                <library dirs="200">
-                    <file>${libs.Objectify-2.2.1.classpath}</file>
-                </library>
-                <library dirs="200">
                     <file>${libs.Objectify.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${libs.GAE1.9.6.classpath}</file>
-                </library>
-                <library dirs="200">
                     <file>${libs.Guava.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
-                <library dirs="200">
-                    <file>${libs.GAE1.9.26.classpath}</file>
-                    <path-in-war>WEB-INF/classes</path-in-war>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
