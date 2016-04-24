@@ -177,6 +177,18 @@ div#buy-tickets p {
 }
 
 /* 2016 */
+.black-is-black-aint .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) 0 -86px no-repeat;
+}
+.but-im-a-cheerleader .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -180px -86px no-repeat;
+}
+.eraserhead .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -360px -86px no-repeat;
+}
+.o-fantasma .film-still {
+    background: url(/images/qaf-2016-sprite.jpg) -540px -86px no-repeat;
+}
 .pom-poko .film-still {
     background: url(/images/qaf-2016-sprite.jpg) 0 0 no-repeat;
 }
