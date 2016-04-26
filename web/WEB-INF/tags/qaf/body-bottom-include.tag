@@ -17,10 +17,10 @@
 <div id="footer2">
   <%--Remove footer menu per client--%>
     <ul class="left">
-        <li>&copy; 2010 ${initParam['com.queerartfilm.wordmark']}</li>
+        <li>${initParam['com.queerartfilm.wordmark']}</li>
     </ul>
     <span class="right gray-rollover">
       Site by <a href="http://www.shaneluitjens.com">Torquere Creative</a>
-      &amp; <a href="http://www.curthelmerich.net">curthelmerich.net</a></span>
+      &amp; <a href="http://www.linkedin.com/in/curthelmerich">Curt Helmerich</a></span>
 </div>
 </div></div>
