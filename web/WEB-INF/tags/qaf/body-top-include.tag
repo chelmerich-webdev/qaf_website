@@ -15,7 +15,6 @@
               <li><a href="${menusMap[key][1]}">${menusMap[key][0]}</a></li>
             </c:forEach>
         </ul>
-        <img id='hbo-logo' src='/images/logo-hbo-100x56.png' alt='HBO' />
     </div>
     <div id="main">
 <%-- These closing <div> tags are located in the <qaf:body-bottom-include> tag

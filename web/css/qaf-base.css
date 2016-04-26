@@ -129,7 +129,9 @@ a:active, .rollover a:active {
 }
 
 #hbo-logo {
-    margin-top: 280px;
+    position: absolute;
+    bottom: 0;
+    left: 101px;
 }
 /* Main content column to right of navbar column, does not float */
 #main {

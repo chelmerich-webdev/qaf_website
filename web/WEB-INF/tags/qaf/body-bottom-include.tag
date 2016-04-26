@@ -23,4 +23,4 @@
       Site by <a href="http://www.shaneluitjens.com">Torquere Creative</a>
       &amp; <a href="http://www.linkedin.com/in/curthelmerich">Curt Helmerich</a></span>
 </div>
-</div></div>
+</div><img id='hbo-logo' src='/images/logo-hbo-100x56.png' alt='HBO' /></div>
