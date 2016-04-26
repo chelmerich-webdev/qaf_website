@@ -17,7 +17,7 @@
 <div id="footer2">
   <%--Remove footer menu per client--%>
     <ul class="left">
-        <li>${initParam['com.queerartfilm.wordmark']}</li>
+        <li>&copy; ${initParam['com.queerartfilm.wordmark']}</li>
     </ul>
     <span class="right gray-rollover">
       Site by <a href="http://www.shaneluitjens.com">Torquere Creative</a>
