@@ -3,17 +3,17 @@
     <context-param>
         <description>Google web font Inconsolata</description>
         <param-name>com.googleapis.font.Inconsolata</param-name>
-        <param-value>http://fonts.googleapis.com/css?family=Inconsolata</param-value>
+        <param-value>https://fonts.googleapis.com/css?family=Inconsolata</param-value>
     </context-param>
     <context-param>
         <description>Google web font DroidSans</description>
         <param-name>com.googleapis.font.DroidSans</param-name>
-        <param-value>http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans:bold</param-value>
+        <param-value>https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans:bold</param-value>
     </context-param>
     <context-param>
         <description>Google web font DroidSerif</description>
         <param-name>com.googleapis.font.DroidSerif</param-name>
-        <param-value>http://fonts.googleapis.com/css?family=Droid+Serif|Droid+Serif:italic</param-value>
+        <param-value>https://fonts.googleapis.com/css?family=Droid+Serif|Droid+Serif:italic</param-value>
     </context-param>
     <context-param>
         <description>YUI Library CSS reset</description>
